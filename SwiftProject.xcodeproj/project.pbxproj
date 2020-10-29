@@ -10,7 +10,6 @@
 		E06969330130F1AFF7ED164F /* Pods_SwiftProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FCE9D2D1BDBC942D57E4327 /* Pods_SwiftProject.framework */; };
 		FB41FF1A254AB49D00C3CCA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41FF19254AB49D00C3CCA3 /* AppDelegate.swift */; };
 		FB41FF1C254AB49D00C3CCA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41FF1B254AB49D00C3CCA3 /* SceneDelegate.swift */; };
-		FB41FF1E254AB49D00C3CCA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41FF1D254AB49D00C3CCA3 /* ViewController.swift */; };
 		FB41FF21254AB49D00C3CCA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB41FF1F254AB49D00C3CCA3 /* Main.storyboard */; };
 		FB41FF23254AB49E00C3CCA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB41FF22254AB49E00C3CCA3 /* Assets.xcassets */; };
 		FB41FF26254AB49E00C3CCA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB41FF24254AB49E00C3CCA3 /* LaunchScreen.storyboard */; };
@@ -42,7 +41,6 @@
 		FB41FF16254AB49D00C3CCA3 /* SwiftProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB41FF19254AB49D00C3CCA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB41FF1B254AB49D00C3CCA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FB41FF1D254AB49D00C3CCA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FB41FF20254AB49D00C3CCA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB41FF22254AB49E00C3CCA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB41FF25254AB49E00C3CCA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,6 +96,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FB41009A254AC95D00C3CCA3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FB41FF19254AB49D00C3CCA3 /* AppDelegate.swift */,
+				FB41FF1B254AB49D00C3CCA3 /* SceneDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FB41009B254AC96800C3CCA3 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FB41FF1F254AB49D00C3CCA3 /* Main.storyboard */,
+				FB41FF22254AB49E00C3CCA3 /* Assets.xcassets */,
+				FB41FF24254AB49E00C3CCA3 /* LaunchScreen.storyboard */,
+				FB41FF27254AB49E00C3CCA3 /* Info.plist */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		FB41FF0D254AB49D00C3CCA3 = {
 			isa = PBXGroup;
 			children = (
@@ -123,13 +141,8 @@
 		FB41FF18254AB49D00C3CCA3 /* SwiftProject */ = {
 			isa = PBXGroup;
 			children = (
-				FB41FF19254AB49D00C3CCA3 /* AppDelegate.swift */,
-				FB41FF1B254AB49D00C3CCA3 /* SceneDelegate.swift */,
-				FB41FF1D254AB49D00C3CCA3 /* ViewController.swift */,
-				FB41FF1F254AB49D00C3CCA3 /* Main.storyboard */,
-				FB41FF22254AB49E00C3CCA3 /* Assets.xcassets */,
-				FB41FF24254AB49E00C3CCA3 /* LaunchScreen.storyboard */,
-				FB41FF27254AB49E00C3CCA3 /* Info.plist */,
+				FB41009B254AC96800C3CCA3 /* Sources */,
+				FB41009A254AC95D00C3CCA3 /* Main */,
 			);
 			path = SwiftProject;
 			sourceTree = "<group>";
@@ -326,7 +339,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB41FF1E254AB49D00C3CCA3 /* ViewController.swift in Sources */,
 				FB41FF1A254AB49D00C3CCA3 /* AppDelegate.swift in Sources */,
 				FB41FF1C254AB49D00C3CCA3 /* SceneDelegate.swift in Sources */,
 			);
@@ -507,7 +519,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A5334CNPAA;
-				INFOPLIST_FILE = SwiftProject/Info.plist;
+				INFOPLIST_FILE = SwiftProject/Sources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -528,7 +540,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A5334CNPAA;
-				INFOPLIST_FILE = SwiftProject/Info.plist;
+				INFOPLIST_FILE = SwiftProject/Sources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
