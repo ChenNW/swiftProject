@@ -31,6 +31,9 @@
 		FB8E9ACA254BFEDF00C96094 /* UCollectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9AC9254BFEDF00C96094 /* UCollectListViewController.swift */; };
 		FB8E9ACF254BFF0C00C96094 /* UDocumentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9ACE254BFF0C00C96094 /* UDocumentListViewController.swift */; };
 		FB8E9AD4254BFF1900C96094 /* UDownloadListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9AD3254BFF1900C96094 /* UDownloadListViewController.swift */; };
+		FB8E9ADA254C0B0500C96094 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9AD9254C0B0500C96094 /* Global.swift */; };
+		FB8E9AE1254C0D9500C96094 /* URefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9AE0254C0D9500C96094 /* URefresh.swift */; };
+		FB8E9AEB254C17E200C96094 /* UAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9AEA254C17E200C96094 /* UAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +87,9 @@
 		FB8E9AC9254BFEDF00C96094 /* UCollectListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCollectListViewController.swift; sourceTree = "<group>"; };
 		FB8E9ACE254BFF0C00C96094 /* UDocumentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDocumentListViewController.swift; sourceTree = "<group>"; };
 		FB8E9AD3254BFF1900C96094 /* UDownloadListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDownloadListViewController.swift; sourceTree = "<group>"; };
+		FB8E9AD9254C0B0500C96094 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		FB8E9AE0254C0D9500C96094 /* URefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URefresh.swift; sourceTree = "<group>"; };
+		FB8E9AEA254C17E200C96094 /* UAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +160,9 @@
 		FB4100A7254ACBE900C3CCA3 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				FB8E9AE9254C17D800C96094 /* API */,
+				FB8E9ADE254C0CC900C96094 /* Component */,
+				FB8E9AD8254C0AEE00C96094 /* PublicTool */,
 				FB4100B9254ACCFB00C3CCA3 /* Extensions */,
 				FB4100B0254ACCC200C3CCA3 /* Base */,
 				FB4100AB254ACC1400C3CCA3 /* Bookshelf */,
@@ -301,6 +310,38 @@
 				FB8E9A62254AD2B500C96094 /* MineViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FB8E9AD8254C0AEE00C96094 /* PublicTool */ = {
+			isa = PBXGroup;
+			children = (
+				FB8E9AD9254C0B0500C96094 /* Global.swift */,
+			);
+			path = PublicTool;
+			sourceTree = "<group>";
+		};
+		FB8E9ADE254C0CC900C96094 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				FB8E9ADF254C0D8500C96094 /* Refresh */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		FB8E9ADF254C0D8500C96094 /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				FB8E9AE0254C0D9500C96094 /* URefresh.swift */,
+			);
+			path = Refresh;
+			sourceTree = "<group>";
+		};
+		FB8E9AE9254C17D800C96094 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FB8E9AEA254C17E200C96094 /* UAPI.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,7 +522,9 @@
 				FB8E9AD4254BFF1900C96094 /* UDownloadListViewController.swift in Sources */,
 				FB41FF1A254AB49D00C3CCA3 /* AppDelegate.swift in Sources */,
 				FB8E9A6B254AD2C000C96094 /* BookShelfViewController.swift in Sources */,
+				FB8E9AEB254C17E200C96094 /* UAPI.swift in Sources */,
 				FB8E9ACA254BFEDF00C96094 /* UCollectListViewController.swift in Sources */,
+				FB8E9ADA254C0B0500C96094 /* Global.swift in Sources */,
 				FB4100B2254ACCD900C3CCA3 /* UBaseViewController.swift in Sources */,
 				FB8E9ABB254BFCC100C96094 /* UVIPListViewController.swift in Sources */,
 				FB8E9ACF254BFF0C00C96094 /* UDocumentListViewController.swift in Sources */,
@@ -490,6 +533,7 @@
 				FB8E9A96254BA92700C96094 /* UPageViewController.swift in Sources */,
 				FB8E9A59254AD29900C96094 /* CategoryController.swift in Sources */,
 				FB8E9AC5254BFCDE00C96094 /* URankListViewController.swift in Sources */,
+				FB8E9AE1254C0D9500C96094 /* URefresh.swift in Sources */,
 				FB4100A3254ACA0E00C3CCA3 /* TabBarViewController.swift in Sources */,
 				FB41FF1C254AB49D00C3CCA3 /* SceneDelegate.swift in Sources */,
 				FB8E9AC0254BFCD300C96094 /* USubscibeListViewController.swift in Sources */,
