@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		E06969330130F1AFF7ED164F /* Pods_SwiftProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FCE9D2D1BDBC942D57E4327 /* Pods_SwiftProject.framework */; };
+		FB4100A3254ACA0E00C3CCA3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4100A2254ACA0E00C3CCA3 /* TabBarViewController.swift */; };
+		FB4100B2254ACCD900C3CCA3 /* UBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4100B1254ACCD900C3CCA3 /* UBaseViewController.swift */; };
+		FB4100BB254ACD2000C3CCA3 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4100BA254ACD2000C3CCA3 /* UIColorExtension.swift */; };
+		FB4100D4254ACF4000C3CCA3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4100D3254ACF4000C3CCA3 /* HomeViewController.swift */; };
 		FB41FF1A254AB49D00C3CCA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41FF19254AB49D00C3CCA3 /* AppDelegate.swift */; };
 		FB41FF1C254AB49D00C3CCA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41FF1B254AB49D00C3CCA3 /* SceneDelegate.swift */; };
 		FB41FF21254AB49D00C3CCA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB41FF1F254AB49D00C3CCA3 /* Main.storyboard */; };
@@ -15,6 +19,18 @@
 		FB41FF26254AB49E00C3CCA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB41FF24254AB49E00C3CCA3 /* LaunchScreen.storyboard */; };
 		FB41FF31254AB49E00C3CCA3 /* SwiftProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41FF30254AB49E00C3CCA3 /* SwiftProjectTests.swift */; };
 		FB41FF3C254AB49E00C3CCA3 /* SwiftProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41FF3B254AB49E00C3CCA3 /* SwiftProjectUITests.swift */; };
+		FB8E9A59254AD29900C96094 /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A58254AD29900C96094 /* CategoryController.swift */; };
+		FB8E9A63254AD2B500C96094 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A62254AD2B500C96094 /* MineViewController.swift */; };
+		FB8E9A6B254AD2C000C96094 /* BookShelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A6A254AD2C000C96094 /* BookShelfViewController.swift */; };
+		FB8E9A96254BA92700C96094 /* UPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A95254BA92700C96094 /* UPageViewController.swift */; };
+		FB8E9A9B254BE1F900C96094 /* UNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A9A254BE1F900C96094 /* UNavigationViewController.swift */; };
+		FB8E9AB6254BFCB500C96094 /* UBoutiqueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9AB5254BFCB500C96094 /* UBoutiqueListViewController.swift */; };
+		FB8E9ABB254BFCC100C96094 /* UVIPListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9ABA254BFCC100C96094 /* UVIPListViewController.swift */; };
+		FB8E9AC0254BFCD300C96094 /* USubscibeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9ABF254BFCD300C96094 /* USubscibeListViewController.swift */; };
+		FB8E9AC5254BFCDE00C96094 /* URankListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9AC4254BFCDE00C96094 /* URankListViewController.swift */; };
+		FB8E9ACA254BFEDF00C96094 /* UCollectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9AC9254BFEDF00C96094 /* UCollectListViewController.swift */; };
+		FB8E9ACF254BFF0C00C96094 /* UDocumentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9ACE254BFF0C00C96094 /* UDocumentListViewController.swift */; };
+		FB8E9AD4254BFF1900C96094 /* UDownloadListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9AD3254BFF1900C96094 /* UDownloadListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +54,11 @@
 		0F4E60C374F5749581C45A3E /* Pods-SwiftProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.debug.xcconfig"; path = "Target Support Files/Pods-SwiftProject/Pods-SwiftProject.debug.xcconfig"; sourceTree = "<group>"; };
 		3799D3F16F34A21FBC5D2A64 /* Pods-SwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.release.xcconfig"; path = "Target Support Files/Pods-SwiftProject/Pods-SwiftProject.release.xcconfig"; sourceTree = "<group>"; };
 		3FCE9D2D1BDBC942D57E4327 /* Pods_SwiftProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB4100A2254ACA0E00C3CCA3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		FB4100B1254ACCD900C3CCA3 /* UBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBaseViewController.swift; sourceTree = "<group>"; };
+		FB4100BA254ACD2000C3CCA3 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		FB4100BF254ACDA100C3CCA3 /* SwiftProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		FB4100D3254ACF4000C3CCA3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FB41FF16254AB49D00C3CCA3 /* SwiftProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB41FF19254AB49D00C3CCA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB41FF1B254AB49D00C3CCA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +72,18 @@
 		FB41FF37254AB49E00C3CCA3 /* SwiftProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB41FF3B254AB49E00C3CCA3 /* SwiftProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftProjectUITests.swift; sourceTree = "<group>"; };
 		FB41FF3D254AB49E00C3CCA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB8E9A58254AD29900C96094 /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
+		FB8E9A62254AD2B500C96094 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		FB8E9A6A254AD2C000C96094 /* BookShelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookShelfViewController.swift; sourceTree = "<group>"; };
+		FB8E9A95254BA92700C96094 /* UPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPageViewController.swift; sourceTree = "<group>"; };
+		FB8E9A9A254BE1F900C96094 /* UNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNavigationViewController.swift; sourceTree = "<group>"; };
+		FB8E9AB5254BFCB500C96094 /* UBoutiqueListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBoutiqueListViewController.swift; sourceTree = "<group>"; };
+		FB8E9ABA254BFCC100C96094 /* UVIPListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVIPListViewController.swift; sourceTree = "<group>"; };
+		FB8E9ABF254BFCD300C96094 /* USubscibeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USubscibeListViewController.swift; sourceTree = "<group>"; };
+		FB8E9AC4254BFCDE00C96094 /* URankListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URankListViewController.swift; sourceTree = "<group>"; };
+		FB8E9AC9254BFEDF00C96094 /* UCollectListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCollectListViewController.swift; sourceTree = "<group>"; };
+		FB8E9ACE254BFF0C00C96094 /* UDocumentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDocumentListViewController.swift; sourceTree = "<group>"; };
+		FB8E9AD3254BFF1900C96094 /* UDownloadListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDownloadListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +134,8 @@
 			children = (
 				FB41FF19254AB49D00C3CCA3 /* AppDelegate.swift */,
 				FB41FF1B254AB49D00C3CCA3 /* SceneDelegate.swift */,
+				FB4100A2254ACA0E00C3CCA3 /* TabBarViewController.swift */,
+				FB4100BF254ACDA100C3CCA3 /* SwiftProject-Bridging-Header.h */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -114,6 +149,81 @@
 				FB41FF27254AB49E00C3CCA3 /* Info.plist */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		FB4100A7254ACBE900C3CCA3 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				FB4100B9254ACCFB00C3CCA3 /* Extensions */,
+				FB4100B0254ACCC200C3CCA3 /* Base */,
+				FB4100AB254ACC1400C3CCA3 /* Bookshelf */,
+				FB4100AA254ACBFD00C3CCA3 /* Category */,
+				FB4100A9254ACBF700C3CCA3 /* Mine */,
+				FB4100A8254ACBF200C3CCA3 /* Home */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		FB4100A8254ACBF200C3CCA3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FB4100AF254ACCB100C3CCA3 /* Controllers */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FB4100A9254ACBF700C3CCA3 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				FB8E9A61254AD2AD00C96094 /* Controllers */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		FB4100AA254ACBFD00C3CCA3 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				FB8E9A57254AD28900C96094 /* Controlles */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		FB4100AB254ACC1400C3CCA3 /* Bookshelf */ = {
+			isa = PBXGroup;
+			children = (
+				FB8E9A60254AD29D00C96094 /* Controllers */,
+			);
+			path = Bookshelf;
+			sourceTree = "<group>";
+		};
+		FB4100AF254ACCB100C3CCA3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB4100D3254ACF4000C3CCA3 /* HomeViewController.swift */,
+				FB8E9AB5254BFCB500C96094 /* UBoutiqueListViewController.swift */,
+				FB8E9ABA254BFCC100C96094 /* UVIPListViewController.swift */,
+				FB8E9ABF254BFCD300C96094 /* USubscibeListViewController.swift */,
+				FB8E9AC4254BFCDE00C96094 /* URankListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FB4100B0254ACCC200C3CCA3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FB4100B1254ACCD900C3CCA3 /* UBaseViewController.swift */,
+				FB8E9A95254BA92700C96094 /* UPageViewController.swift */,
+				FB8E9A9A254BE1F900C96094 /* UNavigationViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		FB4100B9254ACCFB00C3CCA3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FB4100BA254ACD2000C3CCA3 /* UIColorExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		FB41FF0D254AB49D00C3CCA3 = {
@@ -141,6 +251,7 @@
 		FB41FF18254AB49D00C3CCA3 /* SwiftProject */ = {
 			isa = PBXGroup;
 			children = (
+				FB4100A7254ACBE900C3CCA3 /* Code */,
 				FB41009B254AC96800C3CCA3 /* Sources */,
 				FB41009A254AC95D00C3CCA3 /* Main */,
 			);
@@ -163,6 +274,33 @@
 				FB41FF3D254AB49E00C3CCA3 /* Info.plist */,
 			);
 			path = SwiftProjectUITests;
+			sourceTree = "<group>";
+		};
+		FB8E9A57254AD28900C96094 /* Controlles */ = {
+			isa = PBXGroup;
+			children = (
+				FB8E9A58254AD29900C96094 /* CategoryController.swift */,
+			);
+			path = Controlles;
+			sourceTree = "<group>";
+		};
+		FB8E9A60254AD29D00C96094 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB8E9A6A254AD2C000C96094 /* BookShelfViewController.swift */,
+				FB8E9AC9254BFEDF00C96094 /* UCollectListViewController.swift */,
+				FB8E9ACE254BFF0C00C96094 /* UDocumentListViewController.swift */,
+				FB8E9AD3254BFF1900C96094 /* UDownloadListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FB8E9A61254AD2AD00C96094 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB8E9A62254AD2B500C96094 /* MineViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +372,7 @@
 				TargetAttributes = {
 					FB41FF15254AB49D00C3CCA3 = {
 						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1210;
 					};
 					FB41FF2B254AB49E00C3CCA3 = {
 						CreatedOnToolsVersion = 12.1;
@@ -339,8 +478,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB8E9AD4254BFF1900C96094 /* UDownloadListViewController.swift in Sources */,
 				FB41FF1A254AB49D00C3CCA3 /* AppDelegate.swift in Sources */,
+				FB8E9A6B254AD2C000C96094 /* BookShelfViewController.swift in Sources */,
+				FB8E9ACA254BFEDF00C96094 /* UCollectListViewController.swift in Sources */,
+				FB4100B2254ACCD900C3CCA3 /* UBaseViewController.swift in Sources */,
+				FB8E9ABB254BFCC100C96094 /* UVIPListViewController.swift in Sources */,
+				FB8E9ACF254BFF0C00C96094 /* UDocumentListViewController.swift in Sources */,
+				FB4100BB254ACD2000C3CCA3 /* UIColorExtension.swift in Sources */,
+				FB8E9A63254AD2B500C96094 /* MineViewController.swift in Sources */,
+				FB8E9A96254BA92700C96094 /* UPageViewController.swift in Sources */,
+				FB8E9A59254AD29900C96094 /* CategoryController.swift in Sources */,
+				FB8E9AC5254BFCDE00C96094 /* URankListViewController.swift in Sources */,
+				FB4100A3254ACA0E00C3CCA3 /* TabBarViewController.swift in Sources */,
 				FB41FF1C254AB49D00C3CCA3 /* SceneDelegate.swift in Sources */,
+				FB8E9AC0254BFCD300C96094 /* USubscibeListViewController.swift in Sources */,
+				FB8E9A9B254BE1F900C96094 /* UNavigationViewController.swift in Sources */,
+				FB8E9AB6254BFCB500C96094 /* UBoutiqueListViewController.swift in Sources */,
+				FB4100D4254ACF4000C3CCA3 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +672,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A5334CNPAA;
 				INFOPLIST_FILE = SwiftProject/Sources/Info.plist;
@@ -527,6 +683,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ningwei.com.SwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftProject/Main/SwiftProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -538,6 +696,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A5334CNPAA;
 				INFOPLIST_FILE = SwiftProject/Sources/Info.plist;
@@ -548,6 +707,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ningwei.com.SwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftProject/Main/SwiftProject-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
