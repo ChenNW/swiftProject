@@ -20,7 +20,6 @@ class UNavigationViewController: UINavigationController {
         guard let internalTarget = internalTargets.first?.value(forKey: "target") else {
             return
         }
-        
         let action = Selector(("handleNavigationTransition:"))
         let fullScreenGesture = UIPanGestureRecognizer(target: internalTarget, action: action)
         fullScreenGesture.delegate = self
@@ -30,7 +29,7 @@ class UNavigationViewController: UINavigationController {
     }
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
-        if viewControllers.count > 1 {
+        if viewControllers.count > 0 {
             viewController.hidesBottomBarWhenPushed = true
         }
         super.pushViewController(viewController, animated: animated)

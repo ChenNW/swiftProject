@@ -55,6 +55,8 @@ class UBoutiqueListViewController: UBaseViewController {
         collectionView.dataSource = self
         collectionView.register(cellType: UComicCCell.self)
         collectionView.register(cellType: UBoardCCell.self)
+        collectionView.register(supplementaryViewType: UComicCHead.self, ofKind: UICollectionView.elementKindSectionHeader)
+        collectionView.register(supplementaryViewType: UComicFoot.self, ofKind: UICollectionView.elementKindSectionFooter)
         return collectionView
     }()
     
@@ -169,7 +171,6 @@ extension UBoutiqueListViewController: UICollectionViewDataSource,UCollectionVie
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView == HomeCollectionView {
             bannerView.snp.updateConstraints{
-//                print(scrollView.contentOffset.y,scrollView.contentInset.top)
                 $0.top.equalToSuperview().offset(min(0, -(scrollView.contentOffset.y + scrollView.contentInset.top)))
             }
         }
@@ -189,4 +190,46 @@ extension UBoutiqueListViewController: UICollectionViewDataSource,UCollectionVie
         }
     }
     
+    ///组头组尾
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == UICollectionView.elementKindSectionHeader {
+            
+            let head = collectionView.dequeueReusableSupplementaryView(ofKind: kind, for: indexPath, viewType: UComicCHead.self)
+            let model = dataArray[indexPath.section]
+            head.iconImage.setImageView(urlString: model.newTitleIconUrl!, placeHorderImage: nil)
+            head.titleLabel.text = model.itemTitle
+            head.callBlock = { button in
+                
+                switch model.comicType {
+                case .thematic:
+                    let vc = UPageViewController(titles: ["漫画","次元"], controllers: [USpecialViewController(),USpecialViewController()], style: .navgationBarSegment)
+                    self.navigationController?.pushViewController(vc, animated: true)
+                case .animation:
+                    let webVc = UWebViewController(url: "http://m.u17.com/wap/cartoon/list")
+                    webVc.title = "动画"
+                    self.navigationController?.pushViewController(webVc, animated: true)
+                default:
+                    break
+                }
+                
+            }
+            return head
+            
+        }else{
+            
+            let foot = collectionView.dequeueReusableSupplementaryView(ofKind: kind, for: indexPath, viewType: UComicFoot.self)
+            
+            return foot
+        }
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        let comicList = dataArray[section]
+        return comicList.itemTitle!.count > 0 ?CGSize(width: screenWidth, height: 44) :CGSize.zero
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        
+        return dataArray.count - 1 != section ? CGSize(width: screenWidth, height: 10) : CGSize.zero
+    }
 }

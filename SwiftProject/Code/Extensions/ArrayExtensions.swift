@@ -13,5 +13,4 @@ extension Array{
         return Array(self[0..<Swift.min(n, count)])
     }
     
-    
 }
