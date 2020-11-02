@@ -18,5 +18,6 @@ pod 'HMSegmentedControl'
 pod 'IQKeyboardManagerSwift'
 pod 'EmptyDataSet-Swift'
 pod 'UINavigation-SXFixSpace'
-
+#pod 'KakaJSON'
+pod 'Result'
 end

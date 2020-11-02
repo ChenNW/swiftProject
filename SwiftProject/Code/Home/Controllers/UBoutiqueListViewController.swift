@@ -11,6 +11,8 @@ import LLCycleScrollView
 class UBoutiqueListViewController: UBaseViewController {
 
     private var sexType: Int = UserDefaults.standard.integer(forKey: String.sexTypeKey)
+    lazy var dataArray: [ComicListsModel] = []
+    
     
     ///头部轮播图
     private lazy var bannerView : LLCycleScrollView = {
@@ -36,9 +38,9 @@ class UBoutiqueListViewController: UBaseViewController {
     
     ///collectionView
     private lazy var HomeCollectionView : UICollectionView = {
-        let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.minimumLineSpacing = 5
-        flowLayout.minimumInteritemSpacing = 10
+        let flowLayout = UCollectionViewSectionBackgroundLayout ()
+        flowLayout.minimumLineSpacing = 10
+        flowLayout.minimumInteritemSpacing = 5
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: flowLayout)
         collectionView.backgroundColor = UIColor.customBackgroudColor
         collectionView.alwaysBounceVertical = true
@@ -46,9 +48,13 @@ class UBoutiqueListViewController: UBaseViewController {
         ///滚动条位置跟collectionview 一致
         collectionView.scrollIndicatorInsets = collectionView.contentInset
         collectionView.refreshHeader = URefreshHeader{
-            
+            self.loadData(changeSex: false)
         }
         collectionView.refreshFooter = URefreshDiscoverFooter()
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(cellType: UComicCCell.self)
+        collectionView.register(cellType: UBoardCCell.self)
         return collectionView
     }()
     
@@ -76,11 +82,11 @@ class UBoutiqueListViewController: UBaseViewController {
             UserDefaults.standard.setValue(sexType, forKey: String.sexTypeKey)
             UserDefaults.standard.synchronize()
         }
-        
-        ApiLoadingProvider.request(UApi.boutiqueList(sexType: sexType)) { [weak self] (returnData) in
+        ApiLoadingProvider.request(UApi.boutiqueList(sexType: sexType), model: BoutiqueListModel.self) { [self] (returnData) in
             
-            print(returnData)
-           
+            self.HomeCollectionView.refreshHeader.endRefreshing()
+            self.dataArray = returnData?.comicLists ?? []
+            self.HomeCollectionView.reloadData()
         }
         
     }
@@ -110,4 +116,77 @@ class UBoutiqueListViewController: UBaseViewController {
         }
     }
 
+}
+
+extension UBoutiqueListViewController: UICollectionViewDataSource,UCollectionViewSectionBackgroundLayoutDelegateLayout
+{
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        dataArray.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let seconModel = dataArray[section]
+        return seconModel.comics?.prefix(4).count ?? 0
+        
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, backgroundColorForSectionAt section: Int) -> UIColor {
+        return UIColor.white
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let modelArray = self.dataArray[indexPath.section];
+        if modelArray.comicType == .billboard {
+            let  cell  = collectionView.dequeueReusableCell(for: indexPath, cellType: UBoardCCell.self)
+            cell.model = modelArray.comics?[indexPath.item]
+            return cell
+        }else{
+         
+            let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: UComicCCell.self)
+            cell.model = modelArray.comics?[indexPath.item]
+            return cell
+        }
+    }
+    ///size
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let comicList = dataArray[indexPath.section]
+        if comicList.comicType == .billboard {
+            let width = floor((screenWidth - 15.0) / 4.0)
+            return CGSize(width: width, height: 80)
+        }else {
+            if comicList.comicType == .thematic {
+                let width = floor((screenWidth - 5.0) / 2.0)
+                return CGSize(width: width, height: 120)
+            } else {
+                let count = comicList.comics?.takeMax(4).count ?? 0
+                let warp = count % 2 + 2
+                let width = floor((screenWidth - CGFloat(warp - 1) * 5) / CGFloat(warp))
+                return CGSize(width: width, height: CGFloat(warp * 80))
+            }
+        }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView == HomeCollectionView {
+            bannerView.snp.updateConstraints{
+//                print(scrollView.contentOffset.y,scrollView.contentInset.top)
+                $0.top.equalToSuperview().offset(min(0, -(scrollView.contentOffset.y + scrollView.contentInset.top)))
+            }
+        }
+    }
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        if scrollView == HomeCollectionView {
+            UIView.animate(withDuration: 0.5) {
+                self.sexButton.transform = CGAffineTransform(translationX: 50, y: 0)
+            }
+        }
+    }
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if scrollView == HomeCollectionView {
+            UIView.animate(withDuration: 0.5) {
+                self.sexButton.transform = CGAffineTransform.identity
+            }
+        }
+    }
+    
 }

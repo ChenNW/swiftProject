@@ -15,6 +15,7 @@ extension String {
     
 }
 
+///顶层控制器
 var topVC: UIViewController? {
     var resultVC: UIViewController?
     resultVC = _topVC(UIApplication.shared.keyWindow?.rootViewController)
@@ -32,3 +33,23 @@ private  func _topVC(_ vc: UIViewController?) -> UIViewController? {
         return vc
     }
 }
+///Kingfisher
+//MARK://Kingfisher
+
+extension UIImageView {
+    
+    func setImageView(urlString: String,placeHorderImage:Placeholder? = UIImage(named: "normal_placeholder_h") ) {
+        
+        if urlString.count > 0 {
+            self.kf.setImage(with: URL(string: urlString),
+                             placeholder: placeHorderImage,
+                             options:[.transition(.fade(0.5))])
+        }else{
+            self.image = placeHorderImage as? UIImage
+        }
+        
+    }
+    
+}
+
+

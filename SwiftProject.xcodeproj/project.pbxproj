@@ -19,6 +19,13 @@
 		FB41FF26254AB49E00C3CCA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB41FF24254AB49E00C3CCA3 /* LaunchScreen.storyboard */; };
 		FB41FF31254AB49E00C3CCA3 /* SwiftProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41FF30254AB49E00C3CCA3 /* SwiftProjectTests.swift */; };
 		FB41FF3C254AB49E00C3CCA3 /* SwiftProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41FF3B254AB49E00C3CCA3 /* SwiftProjectUITests.swift */; };
+		FB85238A254FA88000648B03 /* UModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB852389254FA88000648B03 /* UModel.swift */; };
+		FB852434254FD09D00648B03 /* UBaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB852433254FD09D00648B03 /* UBaseCollectionViewCell.swift */; };
+		FB85243C254FD19600648B03 /* UComicCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB85243B254FD19600648B03 /* UComicCCell.swift */; };
+		FB8524AA254FEE9900648B03 /* UCollectionViewSectionBackgroundLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8524A9254FEE9900648B03 /* UCollectionViewSectionBackgroundLayout.swift */; };
+		FB8524C6254FF9DD00648B03 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8524C5254FF9DD00648B03 /* ArrayExtensions.swift */; };
+		FB8524CB254FFC1400648B03 /* UBoardCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8524CA254FFC1400648B03 /* UBoardCCell.swift */; };
+		FB8524D0254FFE2500648B03 /* UCollectionViewAlignedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8524CF254FFE2500648B03 /* UCollectionViewAlignedLayout.swift */; };
 		FB8E9A59254AD29900C96094 /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A58254AD29900C96094 /* CategoryController.swift */; };
 		FB8E9A63254AD2B500C96094 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A62254AD2B500C96094 /* MineViewController.swift */; };
 		FB8E9A6B254AD2C000C96094 /* BookShelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A6A254AD2C000C96094 /* BookShelfViewController.swift */; };
@@ -75,6 +82,13 @@
 		FB41FF37254AB49E00C3CCA3 /* SwiftProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB41FF3B254AB49E00C3CCA3 /* SwiftProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftProjectUITests.swift; sourceTree = "<group>"; };
 		FB41FF3D254AB49E00C3CCA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB852389254FA88000648B03 /* UModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UModel.swift; sourceTree = "<group>"; };
+		FB852433254FD09D00648B03 /* UBaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		FB85243B254FD19600648B03 /* UComicCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UComicCCell.swift; sourceTree = "<group>"; };
+		FB8524A9254FEE9900648B03 /* UCollectionViewSectionBackgroundLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCollectionViewSectionBackgroundLayout.swift; sourceTree = "<group>"; };
+		FB8524C5254FF9DD00648B03 /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
+		FB8524CA254FFC1400648B03 /* UBoardCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBoardCCell.swift; sourceTree = "<group>"; };
+		FB8524CF254FFE2500648B03 /* UCollectionViewAlignedLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCollectionViewAlignedLayout.swift; sourceTree = "<group>"; };
 		FB8E9A58254AD29900C96094 /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
 		FB8E9A62254AD2B500C96094 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		FB8E9A6A254AD2C000C96094 /* BookShelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookShelfViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +174,7 @@
 		FB4100A7254ACBE900C3CCA3 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				FB852388254FA87500648B03 /* Model */,
 				FB8E9AE9254C17D800C96094 /* API */,
 				FB8E9ADE254C0CC900C96094 /* Component */,
 				FB8E9AD8254C0AEE00C96094 /* PublicTool */,
@@ -176,6 +191,7 @@
 		FB4100A8254ACBF200C3CCA3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FB852432254FD02800648B03 /* View */,
 				FB4100AF254ACCB100C3CCA3 /* Controllers */,
 			);
 			path = Home;
@@ -231,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				FB4100BA254ACD2000C3CCA3 /* UIColorExtension.swift */,
+				FB8524C5254FF9DD00648B03 /* ArrayExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -285,6 +302,33 @@
 			path = SwiftProjectUITests;
 			sourceTree = "<group>";
 		};
+		FB852388254FA87500648B03 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FB852389254FA88000648B03 /* UModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FB852432254FD02800648B03 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FB852433254FD09D00648B03 /* UBaseCollectionViewCell.swift */,
+				FB85243B254FD19600648B03 /* UComicCCell.swift */,
+				FB8524CA254FFC1400648B03 /* UBoardCCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FB8524A8254FED1900648B03 /* CollectionViewLayout */ = {
+			isa = PBXGroup;
+			children = (
+				FB8524A9254FEE9900648B03 /* UCollectionViewSectionBackgroundLayout.swift */,
+				FB8524CF254FFE2500648B03 /* UCollectionViewAlignedLayout.swift */,
+			);
+			path = CollectionViewLayout;
+			sourceTree = "<group>";
+		};
 		FB8E9A57254AD28900C96094 /* Controlles */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +367,7 @@
 		FB8E9ADE254C0CC900C96094 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				FB8524A8254FED1900648B03 /* CollectionViewLayout */,
 				FB8E9ADF254C0D8500C96094 /* Refresh */,
 			);
 			path = Component;
@@ -521,20 +566,27 @@
 			files = (
 				FB8E9AD4254BFF1900C96094 /* UDownloadListViewController.swift in Sources */,
 				FB41FF1A254AB49D00C3CCA3 /* AppDelegate.swift in Sources */,
+				FB852434254FD09D00648B03 /* UBaseCollectionViewCell.swift in Sources */,
 				FB8E9A6B254AD2C000C96094 /* BookShelfViewController.swift in Sources */,
 				FB8E9AEB254C17E200C96094 /* UAPI.swift in Sources */,
 				FB8E9ACA254BFEDF00C96094 /* UCollectListViewController.swift in Sources */,
 				FB8E9ADA254C0B0500C96094 /* Global.swift in Sources */,
+				FB8524D0254FFE2500648B03 /* UCollectionViewAlignedLayout.swift in Sources */,
 				FB4100B2254ACCD900C3CCA3 /* UBaseViewController.swift in Sources */,
 				FB8E9ABB254BFCC100C96094 /* UVIPListViewController.swift in Sources */,
 				FB8E9ACF254BFF0C00C96094 /* UDocumentListViewController.swift in Sources */,
 				FB4100BB254ACD2000C3CCA3 /* UIColorExtension.swift in Sources */,
 				FB8E9A63254AD2B500C96094 /* MineViewController.swift in Sources */,
 				FB8E9A96254BA92700C96094 /* UPageViewController.swift in Sources */,
+				FB8524C6254FF9DD00648B03 /* ArrayExtensions.swift in Sources */,
 				FB8E9A59254AD29900C96094 /* CategoryController.swift in Sources */,
+				FB85238A254FA88000648B03 /* UModel.swift in Sources */,
+				FB85243C254FD19600648B03 /* UComicCCell.swift in Sources */,
+				FB8524CB254FFC1400648B03 /* UBoardCCell.swift in Sources */,
 				FB8E9AC5254BFCDE00C96094 /* URankListViewController.swift in Sources */,
 				FB8E9AE1254C0D9500C96094 /* URefresh.swift in Sources */,
 				FB4100A3254ACA0E00C3CCA3 /* TabBarViewController.swift in Sources */,
+				FB8524AA254FEE9900648B03 /* UCollectionViewSectionBackgroundLayout.swift in Sources */,
 				FB41FF1C254AB49D00C3CCA3 /* SceneDelegate.swift in Sources */,
 				FB8E9AC0254BFCD300C96094 /* USubscibeListViewController.swift in Sources */,
 				FB8E9A9B254BE1F900C96094 /* UNavigationViewController.swift in Sources */,
