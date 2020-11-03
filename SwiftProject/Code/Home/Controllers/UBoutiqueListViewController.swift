@@ -12,7 +12,13 @@ class UBoutiqueListViewController: UBaseViewController {
 
     private var sexType: Int = UserDefaults.standard.integer(forKey: String.sexTypeKey)
     lazy var dataArray: [ComicListsModel] = []
-    
+    lazy var imagePathArray:[String] = [
+        "https://image.mylife.u17t.com/2020/10/30/1604044030_O5lysl8k59oL.png",
+        "https://image.mylife.u17t.com/2019/04/11/1554967452_7K2TbXK99RKx.png",
+        "https://image.mylife.u17t.com/2019/08/21/1566385590_81novP118pon.jpg",
+        "https://image.mylife.u17t.com/2020/10/30/1604052543_xqQpNXHpqWxQ.jpg",
+        "https://image.mylife.u17t.com/2020/10/28/1603877427_2iZB22w4aGW4.png"
+    ]
     
     ///头部轮播图
     private lazy var bannerView : LLCycleScrollView = {
@@ -24,6 +30,9 @@ class UBoutiqueListViewController: UBaseViewController {
         bannerV.pageControlPosition = .center
         bannerV.pageControlBottom = 20
         bannerV.titleBackgroundColor = .clear
+        bannerV.customPageControlStyle = .snake
+        bannerV.customPageControlTintColor = .orange
+        
         bannerV.lldidSelectItemAtIndex = bannerImageClick(index:)
         
         return bannerV
@@ -32,7 +41,6 @@ class UBoutiqueListViewController: UBaseViewController {
    private lazy var sexButton:UIButton = {
         let button = UIButton()
         button.addTarget(self, action: #selector(sexButtonChanged), for: .touchUpInside)
-        button.setImage(UIImage(named: "gender_male"), for: .normal)
         return button
     }()
     
@@ -68,7 +76,7 @@ class UBoutiqueListViewController: UBaseViewController {
     }
     ///性别按钮的点击
     @objc private func sexButtonChanged (){
-        
+        loadData(changeSex: true)
     }
     
     
@@ -80,7 +88,8 @@ class UBoutiqueListViewController: UBaseViewController {
     ///请求数据
     private func loadData(changeSex: Bool) {
         if changeSex {
-            sexType = 3 - sexType
+//            print(sexType)
+            sexType = 1 - sexType
             UserDefaults.standard.setValue(sexType, forKey: String.sexTypeKey)
             UserDefaults.standard.synchronize()
         }
@@ -89,6 +98,8 @@ class UBoutiqueListViewController: UBaseViewController {
             self.HomeCollectionView.refreshHeader.endRefreshing()
             self.dataArray = returnData?.comicLists ?? []
             self.HomeCollectionView.reloadData()
+            self.sexButton.setImage(UIImage(named: self.sexType == 1 ? "gender_female": "gender_male"), for: .normal)
+            self.bannerView.imagePaths = imagePathArray
         }
         
     }
@@ -208,8 +219,12 @@ extension UBoutiqueListViewController: UICollectionViewDataSource,UCollectionVie
                     let webVc = UWebViewController(url: "http://m.u17.com/wap/cartoon/list")
                     webVc.title = "动画"
                     self.navigationController?.pushViewController(webVc, animated: true)
+
                 default:
-                    break
+                    let vc = UComicListViewController(argCon: model.argCon, argName: model.argName, argValue: model.argValue,controllerType: model.comicType)
+                    vc.title = model.itemTitle
+                    self.navigationController?.pushViewController(vc, animated: true)
+                    
                 }
                 
             }

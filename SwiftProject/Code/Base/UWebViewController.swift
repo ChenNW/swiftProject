@@ -51,22 +51,14 @@ class UWebViewController: UBaseViewController {
     
     override func configNavigationBar() {
         super.configNavigationBar()
-        navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: rightButton)
+        self.isShowRightItem = true
     }
     
-    lazy var rightButton:UIButton = {
-        let button = UIButton()
-         button.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
-         button.setImage(UIImage(named: "nav_reload")?.withRenderingMode(.alwaysOriginal), for: .normal)
-         button.adjustsImageWhenHighlighted = false
-         button.addTarget(self, action: #selector(reload), for: .touchUpInside)
-         return button
-    }()
+
     
-    @objc func reload (){
+    override func rightButtonClick() {
         webView.reload()
     }
-    
     override func leftButtonClick() {
         if webView.canGoBack {
             webView.goBack()

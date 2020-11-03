@@ -20,6 +20,16 @@ enum UComicType: Int ,HandyJSONEnum {
     case billboard = 11
 }
 
+struct spinnerListModel:HandyJSON {
+    var argCon:Int = 0
+    var name:String?
+    var conTag:String?
+}
+struct defaultParametersModel:HandyJSON {
+    var defaultSelection:Int = 0
+    var defaultArgCon:Int = 0
+    var defaultConTagType:String?
+}
 struct ComicListsModel: HandyJSON {
     var comics:[ComicModel]?
     var canedit: Bool = false
@@ -33,6 +43,13 @@ struct ComicListsModel: HandyJSON {
     var argValue: Int = 0
     var argType: Int = 0
     var comicType: UComicType = .none
+    var maxSize: Int = 0
+    var canMore: Bool = false
+    var hasMore: Bool = false
+    var page: Int = 0
+    var spinnerList:[spinnerListModel]?
+    var defaultParameters:defaultParametersModel?
+    
 }
 struct ComicModel: HandyJSON {
     var comicId: Int = 0

@@ -47,6 +47,7 @@ let ApiLoadingProvider = MoyaProvider<UApi>(requestClosure: timeOutClosure,  plu
 
 enum UApi {
     case boutiqueList(sexType:Int) //推荐列表
+    case comicList(argCon: Int, argName:String ,argValue:Int ,page: Int) //漫画列表
 }
 
 extension UApi: TargetType{//Moya协议
@@ -56,7 +57,9 @@ extension UApi: TargetType{//Moya协议
     ///路径
     var path: String {
         switch self {
-        case .boutiqueList: return "comic/boutiqueListNew"
+        case .boutiqueList: return "comic/boutiqueListNew"//首页数据
+        case .comicList: return "list/commonComicList"//漫画列表
+        
             
         }
     }
@@ -68,7 +71,11 @@ extension UApi: TargetType{//Moya协议
         switch self {
         case .boutiqueList(let sexType):
             parmeters["sexType"] = sexType
-       
+        case .comicList(let argCon ,let argName,let argValue,let page):
+            parmeters["argCon"] = argCon
+            if argName.count > 0 {parmeters["argName"] = argName}
+            parmeters["argValue"] = argValue
+            parmeters["page"] = max(1, page)
         }
         
         return .requestParameters(parameters: parmeters, encoding: URLEncoding.default)
@@ -107,6 +114,7 @@ extension MoyaProvider {
                 completion(nil)
                 return
             }
+            ULog("请求地址=\(target.baseURL.appendingPathComponent(target.path).absoluteString)")
             completion(returnData.data?.returnData)
         }
     }

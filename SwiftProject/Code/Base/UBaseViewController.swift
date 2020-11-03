@@ -9,6 +9,19 @@ import UIKit
 
 class UBaseViewController: UIViewController {
 
+    
+    var isShowRightItem:Bool?{
+        didSet{
+            guard let isShow = isShowRightItem else {
+                return
+            }
+            if isShow == true {
+                navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: rightButton)
+            }
+            
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -60,8 +73,17 @@ class UBaseViewController: UIViewController {
         return button
     }()
     
-   
-    
+    lazy var rightButton:UIButton = {
+        let button = UIButton()
+         button.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+         button.setImage(UIImage(named: "nav_reload")?.withRenderingMode(.alwaysOriginal), for: .normal)
+         button.adjustsImageWhenHighlighted = false
+         button.addTarget(self, action: #selector(rightButtonClick), for: .touchUpInside)
+         return button
+    }()
+    @objc func rightButtonClick (){
+        
+    }
 
 }
 
