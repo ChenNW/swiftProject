@@ -33,7 +33,9 @@ struct defaultParametersModel:HandyJSON {
 
 struct VipListModel:HandyJSON {
     var newVipList:[ComicListsModel]?
-    
+}
+struct SubscribeListModel:HandyJSON {
+    var newSubscribeList:[ComicListsModel]?
 }
 
 struct ComicListsModel: HandyJSON {
@@ -100,6 +102,24 @@ struct ComicModel: HandyJSON {
 //    var ext: [ExtModel]?
 }
 
+///排行
+struct RankingModel: HandyJSON {
+    var argCon: Int = 0
+    var argName: String?
+    var argValue: Int = 0
+    var canEdit: Bool = false
+    var cover: String?
+    var isLike: Bool = false
+    var sortId: Int = 0
+    var sortName: String?
+    var title: String?
+    var subTitle: String?
+    var rankingType: Int = 0
+}
+
+struct RankinglistModel: HandyJSON {
+    var rankinglist: [RankingModel]?
+}
 
 
 struct ReturnData<T: HandyJSON> :HandyJSON {

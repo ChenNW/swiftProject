@@ -16,8 +16,8 @@ class TabBarViewController: UITabBarController {
             titles: ["推荐","VIP","订阅","排行"],
             controllers: [
                 UBoutiqueListViewController(),
-                UVIPListViewController(),
-                USubscibeListViewController(),
+                UVIPListViewController(VCType: .VipType),
+                UVIPListViewController(VCType: .SubsicType),
                 URankListViewController()
             ],
             style: .navgationBarSegment)

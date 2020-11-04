@@ -7,8 +7,15 @@
 
 import UIKit
 
-class UVIPListViewController: UBaseViewController {
+enum ControllerType {
+    case VipType
+    case SubsicType
+}
 
+class UVIPListViewController: UBaseViewController {
+    
+    var controllertype:ControllerType = .VipType
+    
     private lazy var dataArray: [ComicListsModel] = []
     lazy var collectionView: UICollectionView = {
         let flow = UCollectionViewSectionBackgroundLayout()
@@ -26,7 +33,13 @@ class UVIPListViewController: UBaseViewController {
             self?.loadData()
         }
         collectionView.register(cellType: UComicCCell.self)
-        collectionView.refreshFooter = URefreshTipKissFooter(with: "VIP用户专享\nVIP用户可以免费阅读全部漫画哦~")
+        var bottomStr:String?
+        if controllertype == .VipType{
+            bottomStr =  "VIP用户专享\nVIP用户可以免费阅读全部漫画哦~"
+        }else{
+            bottomStr =  "使用妖气币可以购买订阅漫画\nVIP会员购买还有优惠哦~"
+        }
+        collectionView.refreshFooter = URefreshTipKissFooter(with:bottomStr!)
         collectionView.uempty = UEmptyView(tapClosure: {
             [weak self] in
             self?.loadData()
@@ -34,9 +47,13 @@ class UVIPListViewController: UBaseViewController {
         return collectionView
     }()
     
+    convenience init( VCType:ControllerType = .VipType) {
+        self.init()
+        self.controllertype = VCType
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         loadData()
     }
     override func configUI() {
@@ -46,14 +63,24 @@ class UVIPListViewController: UBaseViewController {
         }
     }
     func loadData(){
-        ApiLoadingProvider.request(UApi.vipList, model: VipListModel.self) { [weak self](result) in
-            self?.collectionView.refreshHeader.endRefreshing()
-            self?.dataArray = result?.newVipList ?? []
-            self?.collectionView.uempty?.allowShow = true
-            self?.collectionView.reloadData()
+        
+        if controllertype == .VipType {
+            ApiLoadingProvider.request(UApi.vipList, model: VipListModel.self) { [weak self](result) in
+                self?.collectionView.refreshHeader.endRefreshing()
+                self?.dataArray = result?.newVipList ?? []
+                self?.collectionView.uempty?.allowShow = true
+                self?.collectionView.reloadData()
+            }
+        }else{
+            ApiLoadingProvider.request(UApi.subscribeList, model:SubscribeListModel.self) { [weak self](result) in
+                self?.collectionView.refreshHeader.endRefreshing()
+                self?.dataArray = result?.newSubscribeList ?? []
+                self?.collectionView.uempty?.allowShow = true
+                self?.collectionView.reloadData()
+            }
         }
     }
-
+    
 }
 
 extension UVIPListViewController: UCollectionViewSectionBackgroundLayoutDelegateLayout,UICollectionViewDataSource
@@ -112,7 +139,7 @@ extension UVIPListViewController: UCollectionViewSectionBackgroundLayoutDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let comicList = dataArray[indexPath.section]
         guard let model = comicList.comics?[indexPath.row] else { return }
-//        let vc = UComicViewController(comicid: model.comicId)
-//        navigationController?.pushViewController(vc, animated: true)
+        //        let vc = UComicViewController(comicid: model.comicId)
+        //        navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -37,6 +37,7 @@
 		FB85250F25510C0400648B03 /* UComicTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB85250E25510C0400648B03 /* UComicTCell.swift */; };
 		FB8525112551531F00648B03 /* UUpdateTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8525102551531F00648B03 /* UUpdateTCell.swift */; };
 		FB8525142551629500648B03 /* UEmptyDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8525132551629500648B03 /* UEmptyDataSet.swift */; };
+		FB8525162552735100648B03 /* URankTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8525152552735100648B03 /* URankTCell.swift */; };
 		FB8E9A59254AD29900C96094 /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A58254AD29900C96094 /* CategoryController.swift */; };
 		FB8E9A63254AD2B500C96094 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A62254AD2B500C96094 /* MineViewController.swift */; };
 		FB8E9A6B254AD2C000C96094 /* BookShelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A6A254AD2C000C96094 /* BookShelfViewController.swift */; };
@@ -44,7 +45,6 @@
 		FB8E9A9B254BE1F900C96094 /* UNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A9A254BE1F900C96094 /* UNavigationViewController.swift */; };
 		FB8E9AB6254BFCB500C96094 /* UBoutiqueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9AB5254BFCB500C96094 /* UBoutiqueListViewController.swift */; };
 		FB8E9ABB254BFCC100C96094 /* UVIPListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9ABA254BFCC100C96094 /* UVIPListViewController.swift */; };
-		FB8E9AC0254BFCD300C96094 /* USubscibeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9ABF254BFCD300C96094 /* USubscibeListViewController.swift */; };
 		FB8E9AC5254BFCDE00C96094 /* URankListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9AC4254BFCDE00C96094 /* URankListViewController.swift */; };
 		FB8E9ACA254BFEDF00C96094 /* UCollectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9AC9254BFEDF00C96094 /* UCollectListViewController.swift */; };
 		FB8E9ACF254BFF0C00C96094 /* UDocumentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9ACE254BFF0C00C96094 /* UDocumentListViewController.swift */; };
@@ -111,6 +111,7 @@
 		FB85250E25510C0400648B03 /* UComicTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UComicTCell.swift; sourceTree = "<group>"; };
 		FB8525102551531F00648B03 /* UUpdateTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUpdateTCell.swift; sourceTree = "<group>"; };
 		FB8525132551629500648B03 /* UEmptyDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UEmptyDataSet.swift; sourceTree = "<group>"; };
+		FB8525152552735100648B03 /* URankTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URankTCell.swift; sourceTree = "<group>"; };
 		FB8E9A58254AD29900C96094 /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
 		FB8E9A62254AD2B500C96094 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		FB8E9A6A254AD2C000C96094 /* BookShelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookShelfViewController.swift; sourceTree = "<group>"; };
@@ -118,7 +119,6 @@
 		FB8E9A9A254BE1F900C96094 /* UNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNavigationViewController.swift; sourceTree = "<group>"; };
 		FB8E9AB5254BFCB500C96094 /* UBoutiqueListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBoutiqueListViewController.swift; sourceTree = "<group>"; };
 		FB8E9ABA254BFCC100C96094 /* UVIPListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVIPListViewController.swift; sourceTree = "<group>"; };
-		FB8E9ABF254BFCD300C96094 /* USubscibeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USubscibeListViewController.swift; sourceTree = "<group>"; };
 		FB8E9AC4254BFCDE00C96094 /* URankListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URankListViewController.swift; sourceTree = "<group>"; };
 		FB8E9AC9254BFEDF00C96094 /* UCollectListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCollectListViewController.swift; sourceTree = "<group>"; };
 		FB8E9ACE254BFF0C00C96094 /* UDocumentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDocumentListViewController.swift; sourceTree = "<group>"; };
@@ -249,7 +249,6 @@
 				FB4100D3254ACF4000C3CCA3 /* HomeViewController.swift */,
 				FB8E9AB5254BFCB500C96094 /* UBoutiqueListViewController.swift */,
 				FB8E9ABA254BFCC100C96094 /* UVIPListViewController.swift */,
-				FB8E9ABF254BFCD300C96094 /* USubscibeListViewController.swift */,
 				FB8E9AC4254BFCDE00C96094 /* URankListViewController.swift */,
 				FB85250125500FBD00648B03 /* USpecialViewController.swift */,
 				FB8525052550ECE000648B03 /* UUpdateListViewController.swift */,
@@ -347,6 +346,7 @@
 				FB8524F2255007FB00648B03 /* UComicFoot.swift */,
 				FB85250A25510B7200648B03 /* UBaseTableViewCell.swift */,
 				FB8525102551531F00648B03 /* UUpdateTCell.swift */,
+				FB8525152552735100648B03 /* URankTCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -614,6 +614,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB8E9AD4254BFF1900C96094 /* UDownloadListViewController.swift in Sources */,
+				FB8525162552735100648B03 /* URankTCell.swift in Sources */,
 				FB41FF1A254AB49D00C3CCA3 /* AppDelegate.swift in Sources */,
 				FB852434254FD09D00648B03 /* UBaseCollectionViewCell.swift in Sources */,
 				FB8E9A6B254AD2C000C96094 /* BookShelfViewController.swift in Sources */,
@@ -645,7 +646,6 @@
 				FB8524F3255007FB00648B03 /* UComicFoot.swift in Sources */,
 				FB8524AA254FEE9900648B03 /* UCollectionViewSectionBackgroundLayout.swift in Sources */,
 				FB41FF1C254AB49D00C3CCA3 /* SceneDelegate.swift in Sources */,
-				FB8E9AC0254BFCD300C96094 /* USubscibeListViewController.swift in Sources */,
 				FB8525112551531F00648B03 /* UUpdateTCell.swift in Sources */,
 				FB8525042550104B00648B03 /* UWebViewController.swift in Sources */,
 				FB8E9A9B254BE1F900C96094 /* UNavigationViewController.swift in Sources */,

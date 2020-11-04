@@ -49,6 +49,8 @@ enum UApi {
     case boutiqueList(sexType:Int) //推荐列表
     case comicList(argCon: Int, argName:String ,argValue:Int ,page: Int) //漫画列表
     case vipList//VIP列表
+    case subscribeList//订阅列表
+    case rankList//排行列表
 }
 
 extension UApi: TargetType{//Moya协议
@@ -61,7 +63,8 @@ extension UApi: TargetType{//Moya协议
         case .boutiqueList: return "comic/boutiqueListNew"//首页数据
         case .comicList: return "list/commonComicList"//漫画列表
         case .vipList: return "list/vipList"//VIP列表
-            
+        case .subscribeList: return "list/newSubscribeList"//订阅列表
+        case .rankList: return "rank/list"//排行列表
         }
     }
     ///请求方式
