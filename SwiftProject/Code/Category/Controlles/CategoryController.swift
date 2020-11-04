@@ -22,6 +22,7 @@ class CategoryController: UBaseViewController {
         btn.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 0)
         btn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 5)
         btn.addTarget(self, action: #selector(searchButtonClick), for: .touchUpInside)
+        btn.titleLabel?.font = .systemFont(ofSize: 15)
         return btn
     }()
     

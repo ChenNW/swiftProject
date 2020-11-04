@@ -80,6 +80,7 @@ class UBoutiqueListViewController: UBaseViewController {
     ///性别按钮的点击
     @objc private func sexButtonChanged (){
         loadData(changeSex: true)
+        NotificationCenter.default.post(name: .USexTypeDidChange, object: nil)
     }
     
     

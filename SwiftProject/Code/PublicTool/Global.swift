@@ -94,3 +94,8 @@ func getUnitString(value: Int) -> String {
     }
     return tagString
 }
+
+///通知
+extension Notification.Name{
+    static let USexTypeDidChange = NSNotification.Name("USexTypeDidChange")
+}
