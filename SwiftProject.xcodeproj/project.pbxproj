@@ -38,6 +38,8 @@
 		FB8525112551531F00648B03 /* UUpdateTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8525102551531F00648B03 /* UUpdateTCell.swift */; };
 		FB8525142551629500648B03 /* UEmptyDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8525132551629500648B03 /* UEmptyDataSet.swift */; };
 		FB8525162552735100648B03 /* URankTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8525152552735100648B03 /* URankTCell.swift */; };
+		FB852519255280B700648B03 /* URankCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB852518255280B700648B03 /* URankCCell.swift */; };
+		FB85251B2552955700648B03 /* USpecialTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB85251A2552955700648B03 /* USpecialTCell.swift */; };
 		FB8E9A59254AD29900C96094 /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A58254AD29900C96094 /* CategoryController.swift */; };
 		FB8E9A63254AD2B500C96094 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A62254AD2B500C96094 /* MineViewController.swift */; };
 		FB8E9A6B254AD2C000C96094 /* BookShelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A6A254AD2C000C96094 /* BookShelfViewController.swift */; };
@@ -112,6 +114,8 @@
 		FB8525102551531F00648B03 /* UUpdateTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUpdateTCell.swift; sourceTree = "<group>"; };
 		FB8525132551629500648B03 /* UEmptyDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UEmptyDataSet.swift; sourceTree = "<group>"; };
 		FB8525152552735100648B03 /* URankTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URankTCell.swift; sourceTree = "<group>"; };
+		FB852518255280B700648B03 /* URankCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URankCCell.swift; sourceTree = "<group>"; };
+		FB85251A2552955700648B03 /* USpecialTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USpecialTCell.swift; sourceTree = "<group>"; };
 		FB8E9A58254AD29900C96094 /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
 		FB8E9A62254AD2B500C96094 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		FB8E9A6A254AD2C000C96094 /* BookShelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookShelfViewController.swift; sourceTree = "<group>"; };
@@ -230,6 +234,7 @@
 		FB4100AA254ACBFD00C3CCA3 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				FB8525172552809F00648B03 /* View */,
 				FB8E9A57254AD28900C96094 /* Controlles */,
 			);
 			path = Category;
@@ -347,6 +352,7 @@
 				FB85250A25510B7200648B03 /* UBaseTableViewCell.swift */,
 				FB8525102551531F00648B03 /* UUpdateTCell.swift */,
 				FB8525152552735100648B03 /* URankTCell.swift */,
+				FB85251A2552955700648B03 /* USpecialTCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -374,6 +380,14 @@
 				FB8525132551629500648B03 /* UEmptyDataSet.swift */,
 			);
 			path = EmptyDataSet;
+			sourceTree = "<group>";
+		};
+		FB8525172552809F00648B03 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FB852518255280B700648B03 /* URankCCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FB8E9A57254AD28900C96094 /* Controlles */ = {
@@ -641,6 +655,7 @@
 				FB8524CB254FFC1400648B03 /* UBoardCCell.swift in Sources */,
 				FB8E9AC5254BFCDE00C96094 /* URankListViewController.swift in Sources */,
 				FB8E9AE1254C0D9500C96094 /* URefresh.swift in Sources */,
+				FB85251B2552955700648B03 /* USpecialTCell.swift in Sources */,
 				FB4100A3254ACA0E00C3CCA3 /* TabBarViewController.swift in Sources */,
 				FB8524EE2550060000648B03 /* UComicCHead.swift in Sources */,
 				FB8524F3255007FB00648B03 /* UComicFoot.swift in Sources */,
@@ -652,6 +667,7 @@
 				FB8E9AB6254BFCB500C96094 /* UBoutiqueListViewController.swift in Sources */,
 				FB8525142551629500648B03 /* UEmptyDataSet.swift in Sources */,
 				FB4100D4254ACF4000C3CCA3 /* HomeViewController.swift in Sources */,
+				FB852519255280B700648B03 /* URankCCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

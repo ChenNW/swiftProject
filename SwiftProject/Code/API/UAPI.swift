@@ -51,6 +51,8 @@ enum UApi {
     case vipList//VIP列表
     case subscribeList//订阅列表
     case rankList//排行列表
+    case cateList//分类列表
+    case special(argCon:Int, page:Int)//专题列表
 }
 
 extension UApi: TargetType{//Moya协议
@@ -65,6 +67,8 @@ extension UApi: TargetType{//Moya协议
         case .vipList: return "list/vipList"//VIP列表
         case .subscribeList: return "list/newSubscribeList"//订阅列表
         case .rankList: return "rank/list"//排行列表
+        case .cateList: return "sort/mobileCateList"//分类列表
+        case .special: return "comic/special"//专题列表
         }
     }
     ///请求方式
@@ -75,11 +79,17 @@ extension UApi: TargetType{//Moya协议
         switch self {
         case .boutiqueList(let sexType):
             parmeters["sexType"] = sexType
+            
         case .comicList(let argCon ,let argName,let argValue,let page):
             parmeters["argCon"] = argCon
             if argName.count > 0 {parmeters["argName"] = argName}
             parmeters["argValue"] = argValue
             parmeters["page"] = max(1, page)
+            
+        case .special(let argCon, let page):
+            parmeters["argCon"] = argCon
+            parmeters["page"] = page
+            
         default: break
         }
         

@@ -121,6 +121,11 @@ struct RankinglistModel: HandyJSON {
     var rankinglist: [RankingModel]?
 }
 
+///分类
+struct CategoryModel:HandyJSON {
+    var recommendSearch: String?
+    var rankingList:[RankingModel]?
+}
 
 struct ReturnData<T: HandyJSON> :HandyJSON {
     var message: String?

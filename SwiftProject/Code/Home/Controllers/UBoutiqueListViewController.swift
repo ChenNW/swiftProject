@@ -217,7 +217,7 @@ extension UBoutiqueListViewController: UICollectionViewDataSource,UCollectionVie
                 
                 switch model.comicType {
                 case .thematic:
-                    let vc = UPageViewController(titles: ["漫画","次元"], controllers: [USpecialViewController(),USpecialViewController()], style: .navgationBarSegment)
+                    let vc = UPageViewController(titles: ["漫画","次元"], controllers: [USpecialViewController(argCon: 2),USpecialViewController(argCon: 4)], style: .navgationBarSegment)
                     self.navigationController?.pushViewController(vc, animated: true)
                 case .animation:
                     let webVc = UWebViewController(url: "http://m.u17.com/wap/cartoon/list")
