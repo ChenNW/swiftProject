@@ -30,6 +30,12 @@ struct defaultParametersModel:HandyJSON {
     var defaultArgCon:Int = 0
     var defaultConTagType:String?
 }
+
+struct VipListModel:HandyJSON {
+    var newVipList:[ComicListsModel]?
+    
+}
+
 struct ComicListsModel: HandyJSON {
     var comics:[ComicModel]?
     var canedit: Bool = false

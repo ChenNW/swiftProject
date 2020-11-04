@@ -36,6 +36,7 @@
 		FB85250B25510B7200648B03 /* UBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB85250A25510B7200648B03 /* UBaseTableViewCell.swift */; };
 		FB85250F25510C0400648B03 /* UComicTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB85250E25510C0400648B03 /* UComicTCell.swift */; };
 		FB8525112551531F00648B03 /* UUpdateTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8525102551531F00648B03 /* UUpdateTCell.swift */; };
+		FB8525142551629500648B03 /* UEmptyDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8525132551629500648B03 /* UEmptyDataSet.swift */; };
 		FB8E9A59254AD29900C96094 /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A58254AD29900C96094 /* CategoryController.swift */; };
 		FB8E9A63254AD2B500C96094 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A62254AD2B500C96094 /* MineViewController.swift */; };
 		FB8E9A6B254AD2C000C96094 /* BookShelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A6A254AD2C000C96094 /* BookShelfViewController.swift */; };
@@ -109,6 +110,7 @@
 		FB85250A25510B7200648B03 /* UBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBaseTableViewCell.swift; sourceTree = "<group>"; };
 		FB85250E25510C0400648B03 /* UComicTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UComicTCell.swift; sourceTree = "<group>"; };
 		FB8525102551531F00648B03 /* UUpdateTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUpdateTCell.swift; sourceTree = "<group>"; };
+		FB8525132551629500648B03 /* UEmptyDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UEmptyDataSet.swift; sourceTree = "<group>"; };
 		FB8E9A58254AD29900C96094 /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
 		FB8E9A62254AD2B500C96094 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		FB8E9A6A254AD2C000C96094 /* BookShelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookShelfViewController.swift; sourceTree = "<group>"; };
@@ -366,6 +368,14 @@
 			path = PublicCell;
 			sourceTree = "<group>";
 		};
+		FB8525122551625C00648B03 /* EmptyDataSet */ = {
+			isa = PBXGroup;
+			children = (
+				FB8525132551629500648B03 /* UEmptyDataSet.swift */,
+			);
+			path = EmptyDataSet;
+			sourceTree = "<group>";
+		};
 		FB8E9A57254AD28900C96094 /* Controlles */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +414,7 @@
 		FB8E9ADE254C0CC900C96094 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				FB8525122551625C00648B03 /* EmptyDataSet */,
 				FB85250925510B0500648B03 /* PublicCell */,
 				FB8524A8254FED1900648B03 /* CollectionViewLayout */,
 				FB8E9ADF254C0D8500C96094 /* Refresh */,
@@ -639,6 +650,7 @@
 				FB8525042550104B00648B03 /* UWebViewController.swift in Sources */,
 				FB8E9A9B254BE1F900C96094 /* UNavigationViewController.swift in Sources */,
 				FB8E9AB6254BFCB500C96094 /* UBoutiqueListViewController.swift in Sources */,
+				FB8525142551629500648B03 /* UEmptyDataSet.swift in Sources */,
 				FB4100D4254ACF4000C3CCA3 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

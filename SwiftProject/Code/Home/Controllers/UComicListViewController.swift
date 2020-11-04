@@ -32,6 +32,9 @@ class UComicListViewController: UBaseViewController {
         tableView.refreshFooter = URefreshAutoFooter{[weak self] in
             self?.loadData(more: true)
         }
+        tableView.uempty = UEmptyView(tapClosure: {
+            self.loadData(more: false)
+        })
         return tableView
     }()
     
@@ -62,7 +65,7 @@ class UComicListViewController: UBaseViewController {
             
             if !more{self?.dataArray.removeAll()}
             self?.dataArray.append(contentsOf: result?.comics ?? [])
-            
+            self?.tableView.uempty?.allowShow = true
             self?.tableView.reloadData()
             
             guard let defaultParameters = result?.defaultParameters else{return}

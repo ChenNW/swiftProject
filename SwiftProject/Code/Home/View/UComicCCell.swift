@@ -7,6 +7,12 @@
 
 import UIKit
 
+enum UComicCCellStyle {
+    case none
+    case withTitle
+    case withTitleAndDesc
+}
+
 class UComicCCell: UBaseCollectionViewCell {
     
     private lazy var iconImageView:UIImageView = {
@@ -53,6 +59,37 @@ class UComicCCell: UBaseCollectionViewCell {
             $0.bottom.equalTo(titleLabel.snp.top)
         }
     }
+    
+    var style:UComicCCellStyle = .withTitle{
+        
+        didSet{
+            switch style {
+            case .none:
+                iconImageView.snp.updateConstraints{
+                    $0.bottom.equalToSuperview()
+                }
+                titleLabel.isHidden = true
+                descLabel.isHidden = true
+            case .withTitle:
+                titleLabel.snp.updateConstraints{
+                    $0.bottom.equalTo(descLabel.snp.top).offset(20)
+                }
+                titleLabel.isHidden = false
+                descLabel.isHidden = true
+            case .withTitleAndDesc:
+//                titleLabel.snp.updateConstraints{
+//                    $0.bottom.equalToSuperview().offset(-25)
+//                }
+                titleLabel.isHidden = false
+                descLabel.isHidden = false
+            }
+            
+        }
+        
+        
+    }
+    
+    
     
     var model: ComicModel?{
         

@@ -65,6 +65,9 @@ class UBoutiqueListViewController: UBaseViewController {
         collectionView.register(cellType: UBoardCCell.self)
         collectionView.register(supplementaryViewType: UComicCHead.self, ofKind: UICollectionView.elementKindSectionHeader)
         collectionView.register(supplementaryViewType: UComicFoot.self, ofKind: UICollectionView.elementKindSectionFooter)
+        collectionView.uempty = UEmptyView(verticalOffset: -(collectionView.contentInset.top), tapClosure: { [self] in
+            self.loadData(changeSex: false)
+        })
         return collectionView
     }()
     
@@ -100,6 +103,7 @@ class UBoutiqueListViewController: UBaseViewController {
             self.HomeCollectionView.reloadData()
             self.sexButton.setImage(UIImage(named: self.sexType == 1 ? "gender_female": "gender_male"), for: .normal)
             self.bannerView.imagePaths = imagePathArray
+            self.HomeCollectionView.uempty?.allowShow = true
         }
         
     }

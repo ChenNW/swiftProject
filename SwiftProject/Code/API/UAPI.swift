@@ -48,6 +48,7 @@ let ApiLoadingProvider = MoyaProvider<UApi>(requestClosure: timeOutClosure,  plu
 enum UApi {
     case boutiqueList(sexType:Int) //推荐列表
     case comicList(argCon: Int, argName:String ,argValue:Int ,page: Int) //漫画列表
+    case vipList//VIP列表
 }
 
 extension UApi: TargetType{//Moya协议
@@ -59,7 +60,7 @@ extension UApi: TargetType{//Moya协议
         switch self {
         case .boutiqueList: return "comic/boutiqueListNew"//首页数据
         case .comicList: return "list/commonComicList"//漫画列表
-        
+        case .vipList: return "list/vipList"//VIP列表
             
         }
     }
@@ -76,6 +77,7 @@ extension UApi: TargetType{//Moya协议
             if argName.count > 0 {parmeters["argName"] = argName}
             parmeters["argValue"] = argValue
             parmeters["page"] = max(1, page)
+        default: break
         }
         
         return .requestParameters(parameters: parmeters, encoding: URLEncoding.default)
