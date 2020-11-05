@@ -252,4 +252,28 @@ extension UBoutiqueListViewController: UICollectionViewDataSource,UCollectionVie
         
         return dataArray.count - 1 != section ? CGSize(width: screenWidth, height: 10) : CGSize.zero
     }
+    //MARK: item点击
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let comicList = dataArray[indexPath.section]
+        guard let item = comicList.comics?[indexPath.row] else { return }
+        
+        if comicList.comicType == .billboard {//暂无用到
+            let vc = UComicListViewController(argName: item.argName,
+                                              argValue: item.argValue)
+            vc.title = item.name
+            navigationController?.pushViewController(vc, animated: true)
+        } else {
+            if item.linkType == 2 {
+                
+                guard let url = item.ext?.compactMap({ return $0.key == "url" ? $0.val : ""}).joined() else {
+                    return
+                }
+                let vc = UWebViewController(url: url)
+                vc.title = item.itemTitle
+                navigationController?.pushViewController(vc, animated: true)
+            } else {
+                
+            }
+        }
+    }
 }

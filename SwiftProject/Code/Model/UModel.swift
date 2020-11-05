@@ -99,7 +99,13 @@ struct ComicModel: HandyJSON {
     var is_vip: Bool = false
     var isExpired: Bool = false
     var canToolBarShare: Bool = false
-//    var ext: [ExtModel]?
+    var ext: [ExtModel]?
+}
+
+struct ExtModel:HandyJSON {
+    var key:String?
+    var val:String?
+    
 }
 
 ///排行
