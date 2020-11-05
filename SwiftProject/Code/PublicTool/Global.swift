@@ -6,7 +6,7 @@
 //
 
 
-
+import SnapKit
 let screenWidth = UIScreen.main.bounds.size.width
 let screenHeight = UIScreen.main.bounds.size.height
 
@@ -98,4 +98,15 @@ func getUnitString(value: Int) -> String {
 ///通知
 extension Notification.Name{
     static let USexTypeDidChange = NSNotification.Name("USexTypeDidChange")
+}
+//MARK:SnapKit
+extension ConstraintView {
+    var usnp:ConstraintBasicAttributesDSL {
+     
+        if #available(iOS 11.0, *) {
+            return self.safeAreaLayoutGuide.snp
+        }else{
+            return self.snp
+        }
+    }
 }

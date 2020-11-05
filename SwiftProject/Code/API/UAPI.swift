@@ -41,7 +41,8 @@ let LoadingPlugin = NetworkActivityPlugin{ (type ,target) in
 
 
 
-
+let ApiProvider = MoyaProvider<UApi>(requestClosure: timeOutClosure)
+///带加载圈
 let ApiLoadingProvider = MoyaProvider<UApi>(requestClosure: timeOutClosure,  plugins: [LoadingPlugin])
 
 
@@ -53,6 +54,11 @@ enum UApi {
     case rankList//排行列表
     case cateList//分类列表
     case special(argCon:Int, page:Int)//专题列表
+    case detailStatic(comicid: Int)//详情(基本)
+    case detailRealtime(comicid: Int)//详情(实时)
+    case commentList(object_id: Int, thread_id: Int, page: Int)//评论
+    case guessLike//猜你喜欢
+    
 }
 
 extension UApi: TargetType{//Moya协议
@@ -69,6 +75,10 @@ extension UApi: TargetType{//Moya协议
         case .rankList: return "rank/list"//排行列表
         case .cateList: return "sort/mobileCateList"//分类列表
         case .special: return "comic/special"//专题列表
+        case .detailStatic: return "comic/detail_static_new"//详情(基本)
+        case .detailRealtime: return "comic/detail_realtime"//详情(实时)
+        case .commentList: return "comment/list"//评论
+        case .guessLike: return "comic/guessLike"//猜你喜欢
         }
     }
     ///请求方式
@@ -89,7 +99,13 @@ extension UApi: TargetType{//Moya协议
         case .special(let argCon, let page):
             parmeters["argCon"] = argCon
             parmeters["page"] = page
-            
+        case .detailStatic(let comicid),
+             .detailRealtime(let comicid):
+            parmeters["comicid"] = comicid
+        case .commentList(let object_id, let thread_id, let page):
+            parmeters["object_id"] = object_id
+            parmeters["thread_id"] = thread_id
+            parmeters["page"] = page
         default: break
         }
         

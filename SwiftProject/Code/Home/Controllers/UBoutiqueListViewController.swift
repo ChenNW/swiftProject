@@ -123,7 +123,7 @@ class UBoutiqueListViewController: UBaseViewController {
         view.addSubview(bannerView)
         bannerView.snp.makeConstraints{
             $0.left.right.top.equalToSuperview()
-            $0.height.equalTo(200)
+            $0.height.equalTo(screenWidth * 0.467)
         }
         ///sexButton
         view.addSubview(sexButton)
@@ -272,6 +272,9 @@ extension UBoutiqueListViewController: UICollectionViewDataSource,UCollectionVie
                 vc.title = item.itemTitle
                 navigationController?.pushViewController(vc, animated: true)
             } else {
+                
+                let detailVc = UComicViewController(detailId: item.comicId)
+                self.navigationController?.pushViewController(detailVc, animated: true)
                 
             }
         }

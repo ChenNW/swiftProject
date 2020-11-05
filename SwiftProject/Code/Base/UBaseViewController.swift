@@ -32,13 +32,12 @@ class UBaseViewController: UIViewController {
             automaticallyAdjustsScrollViewInsets = false
         }
         
-        configNavigationBar()
         configUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        configNavigationBar()
+        configNavigationBar()
     }
     
     func configUI(){}

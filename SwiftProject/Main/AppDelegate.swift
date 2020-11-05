@@ -5,34 +5,63 @@
 //  Created by Cnw on 2020/10/29.
 //
 
-import UIKit
+import IQKeyboardManagerSwift
 
-@available(iOS 13.0, *)
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var window: UIWindow?
+    lazy var reachbility: NetworkReachabilityManager? = {
+        return NetworkReachabilityManager(host: "http://app.u17.com")
+    }()
 
-
+    var orientation:UIInterfaceOrientationMask = .portrait
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        configBase()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.backgroundColor = UIColor.white
+        window?.rootViewController = TabBarViewController()
+        window?.makeKeyAndVisible()
         return true
     }
-
-    // MARK: UISceneSession Lifecycle
-
-    @available(iOS 13.0, *)
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+    
+    func configBase(){
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        //MARK: 性别缓存
+        let defaults = UserDefaults.standard
+        if defaults.value(forKey: String.sexTypeKey) == nil {
+            defaults.setValue(1, forKey: String.sexTypeKey)
+            defaults.synchronize()
+        }
+        
+        //MARK: 网络监测
+        reachbility?.startListening{ status in
+        }
+        
     }
 
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
 
 
 }
 
+extension UIApplication{
+    
+    class func changeOrientationTo(landscapeRight: Bool){
+        guard let delegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        if landscapeRight {
+            delegate.orientation = .landscapeRight
+            UIApplication.shared.supportedInterfaceOrientations(for: delegate.window)
+            UIDevice.current.setValue(UIInterfaceOrientation.landscapeRight.rawValue, forKey: "orientation")
+        }else{
+            delegate.orientation = .portrait
+            UIApplication.shared.supportedInterfaceOrientations(for: delegate.window)
+            UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
+        }
+        
+    }
+    
+}
