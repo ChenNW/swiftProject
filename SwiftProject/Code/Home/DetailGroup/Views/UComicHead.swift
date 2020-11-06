@@ -150,7 +150,7 @@ class UComicHead: UIView {
             }
             
             let text = NSMutableAttributedString(string: "点击 收藏")
-            text.insert(NSAttributedString(string: "\(model.total_ticket ?? "0")", attributes: [NSAttributedString.Key.foregroundColor:UIColor.orange,NSAttributedString.Key.font:UIFont.systemFont(ofSize: 16)]), at: 2)
+            text.insert(NSAttributedString(string: "\(model.click_total ?? "0")", attributes: [NSAttributedString.Key.foregroundColor:UIColor.orange,NSAttributedString.Key.font:UIFont.systemFont(ofSize: 16)]), at: 2)
             text.append(NSAttributedString(string: "\(model.favorite_total ?? "0")",attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 16),NSAttributedString.Key.foregroundColor:UIColor.orange]))
             totalLabel.attributedText = text
         }

@@ -78,6 +78,7 @@ class UComicViewController: UBaseViewController {
             
             self?.detailStackModel = result
             self?.headView.detailModel = self?.detailStackModel?.comic
+            self?.detailVC.detailModel = result
             ///请求评论
             ApiProvider.request(UApi.commentList(object_id: result?.comic?.comic_id ?? 0, thread_id: result?.comic?.thread_id ?? 0, page: -1), model: ComicListsModel.self) { [weak self](result) in
                 
@@ -101,7 +102,7 @@ class UComicViewController: UBaseViewController {
         
         group.notify(queue: DispatchQueue.main) {
             
-            
+            self.detailVC.reloadData()
         }
         
     }

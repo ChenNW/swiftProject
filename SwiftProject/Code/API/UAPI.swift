@@ -85,31 +85,32 @@ extension UApi: TargetType{//Moya协议
     var method: Moya.Method { return .get}
     ///task
     var task: Task {
-        var parmeters:[String:Any] = [:]
+        var parameters:[String:Any] = [:]
         switch self {
         case .boutiqueList(let sexType):
-            parmeters["sexType"] = sexType
+            parameters["sexType"] = sexType
             
         case .comicList(let argCon ,let argName,let argValue,let page):
-            parmeters["argCon"] = argCon
-            if argName.count > 0 {parmeters["argName"] = argName}
-            parmeters["argValue"] = argValue
-            parmeters["page"] = max(1, page)
+            parameters["argCon"] = argCon
+            if argName.count > 0 {parameters["argName"] = argName}
+            parameters["argValue"] = argValue
+            parameters["page"] = max(1, page)
             
         case .special(let argCon, let page):
-            parmeters["argCon"] = argCon
-            parmeters["page"] = page
+            parameters["argCon"] = argCon
+            parameters["page"] = page
         case .detailStatic(let comicid),
              .detailRealtime(let comicid):
-            parmeters["comicid"] = comicid
+            parameters["comicid"] = comicid
         case .commentList(let object_id, let thread_id, let page):
-            parmeters["object_id"] = object_id
-            parmeters["thread_id"] = thread_id
-            parmeters["page"] = page
+            parameters["object_id"] = object_id
+            parameters["thread_id"] = thread_id
+            parameters["page"] = page
         default: break
         }
         
-        return .requestParameters(parameters: parmeters, encoding: URLEncoding.default)
+        ULog("\(baseURL)\(path)?\(parameters)")
+        return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
     }
     
     var sampleData: Data{
@@ -145,7 +146,7 @@ extension MoyaProvider {
                 completion(nil)
                 return
             }
-            ULog("请求地址=\(target.baseURL.appendingPathComponent(target.path).absoluteString)")
+//            ULog("请求地址=\(target.baseURL.appendingPathComponent(target.path).absoluteString) 请求参数=\(String(describing: target))")
             completion(returnData.data?.returnData)
         }
     }

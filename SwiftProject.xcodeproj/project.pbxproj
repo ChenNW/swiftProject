@@ -64,6 +64,10 @@
 		FBF3243E2553C3E600D40FF6 /* UCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF3243D2553C3E600D40FF6 /* UCommentViewController.swift */; };
 		FBF324402553E48C00D40FF6 /* UComicHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF3243F2553E48C00D40FF6 /* UComicHead.swift */; };
 		FBF324422553FC9B00D40FF6 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF324412553FC9B00D40FF6 /* UIViewExtension.swift */; };
+		FBF32444255513B500D40FF6 /* UDescriptionTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF32443255513B500D40FF6 /* UDescriptionTCell.swift */; };
+		FBF3244625551A2600D40FF6 /* UOtherWorksTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF3244525551A2600D40FF6 /* UOtherWorksTCell.swift */; };
+		FBF3244825551BF800D40FF6 /* UTicketTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF3244725551BF800D40FF6 /* UTicketTCell.swift */; };
+		FBF3244A25551E9D00D40FF6 /* UGuessLikeTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF3244925551E9D00D40FF6 /* UGuessLikeTCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +154,10 @@
 		FBF3243D2553C3E600D40FF6 /* UCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCommentViewController.swift; sourceTree = "<group>"; };
 		FBF3243F2553E48C00D40FF6 /* UComicHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UComicHead.swift; sourceTree = "<group>"; };
 		FBF324412553FC9B00D40FF6 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		FBF32443255513B500D40FF6 /* UDescriptionTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDescriptionTCell.swift; sourceTree = "<group>"; };
+		FBF3244525551A2600D40FF6 /* UOtherWorksTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UOtherWorksTCell.swift; sourceTree = "<group>"; };
+		FBF3244725551BF800D40FF6 /* UTicketTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTicketTCell.swift; sourceTree = "<group>"; };
+		FBF3244925551E9D00D40FF6 /* UGuessLikeTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UGuessLikeTCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -518,6 +526,10 @@
 			isa = PBXGroup;
 			children = (
 				FBF3243F2553E48C00D40FF6 /* UComicHead.swift */,
+				FBF32443255513B500D40FF6 /* UDescriptionTCell.swift */,
+				FBF3244525551A2600D40FF6 /* UOtherWorksTCell.swift */,
+				FBF3244725551BF800D40FF6 /* UTicketTCell.swift */,
+				FBF3244925551E9D00D40FF6 /* UGuessLikeTCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -699,6 +711,7 @@
 			files = (
 				FB8E9AD4254BFF1900C96094 /* UDownloadListViewController.swift in Sources */,
 				FB8525162552735100648B03 /* URankTCell.swift in Sources */,
+				FBF3244625551A2600D40FF6 /* UOtherWorksTCell.swift in Sources */,
 				FB8525212552A3C300648B03 /* UIScrollView+ParallaxHeader.swift in Sources */,
 				FB41FF1A254AB49D00C3CCA3 /* AppDelegate.swift in Sources */,
 				FB8525252552A46500648B03 /* UMineHead.swift in Sources */,
@@ -723,9 +736,11 @@
 				FB8E9A63254AD2B500C96094 /* MineViewController.swift in Sources */,
 				FB8E9A96254BA92700C96094 /* UPageViewController.swift in Sources */,
 				FB8524C6254FF9DD00648B03 /* ArrayExtensions.swift in Sources */,
+				FBF3244A25551E9D00D40FF6 /* UGuessLikeTCell.swift in Sources */,
 				FB8524D52550056100648B03 /* UBaseCollectionReusableView.swift in Sources */,
 				FB85250B25510B7200648B03 /* UBaseTableViewCell.swift in Sources */,
 				FB8525062550ECE000648B03 /* UUpdateListViewController.swift in Sources */,
+				FBF3244825551BF800D40FF6 /* UTicketTCell.swift in Sources */,
 				FB8E9A59254AD29900C96094 /* CategoryController.swift in Sources */,
 				FB85238A254FA88000648B03 /* UModel.swift in Sources */,
 				FB85243C254FD19600648B03 /* UComicCCell.swift in Sources */,
@@ -748,6 +763,7 @@
 				FB8525142551629500648B03 /* UEmptyDataSet.swift in Sources */,
 				FB4100D4254ACF4000C3CCA3 /* HomeViewController.swift in Sources */,
 				FB852519255280B700648B03 /* URankCCell.swift in Sources */,
+				FBF32444255513B500D40FF6 /* UDescriptionTCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
