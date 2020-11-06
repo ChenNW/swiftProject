@@ -22,6 +22,7 @@ class UDetailViewController: UBaseViewController {
         tableV.register(cellType: UDescriptionTCell.self)
         tableV.register(cellType: UOtherWorksTCell.self)
         tableV.register(cellType: UTicketTCell.self)
+        tableV.register(cellType: UGuessLikeTCell.self)
         return tableV
     }()
     
@@ -55,14 +56,19 @@ extension UDetailViewController:UITableViewDelegate,UITableViewDataSource{
             let cell = tableView.dequeueReusableCell(for: indexPath, cellType: UDescriptionTCell.self)
             cell.model = detailModel
             return cell
-        }else if indexPath.row == 1 {
+        }else if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCell(for: indexPath, cellType: UOtherWorksTCell.self)
             cell.model = detailModel
             return cell
-        }else if indexPath.row == 2 {
+        }else if indexPath.section == 2 {
             let cell = tableView.dequeueReusableCell(for: indexPath, cellType: UTicketTCell.self)
             cell.model = detailRealtime
             return cell
+        }else{
+            let cell = tableView.dequeueReusableCell(for: indexPath, cellType: UGuessLikeTCell.self)
+            cell.model = guessLike
+            return cell
+            
         }
     }
     
