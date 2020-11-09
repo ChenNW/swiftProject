@@ -49,6 +49,11 @@
 		FB88F52C2558EDDE00C2F62F /* UChapterCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88F52B2558EDDE00C2F62F /* UChapterCCell.swift */; };
 		FB88F52E2559013400C2F62F /* UChapterCHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88F52D2559013400C2F62F /* UChapterCHead.swift */; };
 		FB88F5302559134300C2F62F /* UCommentTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88F52F2559134300C2F62F /* UCommentTCell.swift */; };
+		FB88F53225592AED00C2F62F /* UReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88F53125592AED00C2F62F /* UReadViewController.swift */; };
+		FB88F53425592D5C00C2F62F /* UReadTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88F53325592D5C00C2F62F /* UReadTopBar.swift */; };
+		FB88F5362559340400C2F62F /* UReadBottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88F5352559340400C2F62F /* UReadBottomBar.swift */; };
+		FB88F53825593A1700C2F62F /* UReadCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88F53725593A1700C2F62F /* UReadCCell.swift */; };
+		FB88F53B25593E2300C2F62F /* UNoticeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88F53A25593E2300C2F62F /* UNoticeBar.swift */; };
 		FB8E9A59254AD29900C96094 /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A58254AD29900C96094 /* CategoryController.swift */; };
 		FB8E9A63254AD2B500C96094 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A62254AD2B500C96094 /* MineViewController.swift */; };
 		FB8E9A6B254AD2C000C96094 /* BookShelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A6A254AD2C000C96094 /* BookShelfViewController.swift */; };
@@ -144,6 +149,11 @@
 		FB88F52B2558EDDE00C2F62F /* UChapterCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UChapterCCell.swift; sourceTree = "<group>"; };
 		FB88F52D2559013400C2F62F /* UChapterCHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UChapterCHead.swift; sourceTree = "<group>"; };
 		FB88F52F2559134300C2F62F /* UCommentTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCommentTCell.swift; sourceTree = "<group>"; };
+		FB88F53125592AED00C2F62F /* UReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UReadViewController.swift; sourceTree = "<group>"; };
+		FB88F53325592D5C00C2F62F /* UReadTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UReadTopBar.swift; sourceTree = "<group>"; };
+		FB88F5352559340400C2F62F /* UReadBottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UReadBottomBar.swift; sourceTree = "<group>"; };
+		FB88F53725593A1700C2F62F /* UReadCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UReadCCell.swift; sourceTree = "<group>"; };
+		FB88F53A25593E2300C2F62F /* UNoticeBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNoticeBar.swift; sourceTree = "<group>"; };
 		FB8E9A58254AD29900C96094 /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
 		FB8E9A62254AD2B500C96094 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		FB8E9A6A254AD2C000C96094 /* BookShelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookShelfViewController.swift; sourceTree = "<group>"; };
@@ -449,6 +459,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		FB88F53925593E0B00C2F62F /* NoticeBar */ = {
+			isa = PBXGroup;
+			children = (
+				FB88F53A25593E2300C2F62F /* UNoticeBar.swift */,
+			);
+			path = NoticeBar;
+			sourceTree = "<group>";
+		};
 		FB8E9A57254AD28900C96094 /* Controlles */ = {
 			isa = PBXGroup;
 			children = (
@@ -487,6 +505,7 @@
 		FB8E9ADE254C0CC900C96094 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				FB88F53925593E0B00C2F62F /* NoticeBar */,
 				FB85251C2552A38700648B03 /* ParallaxHeader */,
 				FB8525122551625C00648B03 /* EmptyDataSet */,
 				FB85250925510B0500648B03 /* PublicCell */,
@@ -529,6 +548,7 @@
 				FBF3243B2553C3DC00D40FF6 /* UChapterViewController.swift */,
 				FBF3243D2553C3E600D40FF6 /* UCommentViewController.swift */,
 				FB88F5272558E07200C2F62F /* UOtherWorksViewController.swift */,
+				FB88F53125592AED00C2F62F /* UReadViewController.swift */,
 			);
 			path = Contrllers;
 			sourceTree = "<group>";
@@ -545,6 +565,9 @@
 				FB88F52B2558EDDE00C2F62F /* UChapterCCell.swift */,
 				FB88F52D2559013400C2F62F /* UChapterCHead.swift */,
 				FB88F52F2559134300C2F62F /* UCommentTCell.swift */,
+				FB88F53325592D5C00C2F62F /* UReadTopBar.swift */,
+				FB88F5352559340400C2F62F /* UReadBottomBar.swift */,
+				FB88F53725593A1700C2F62F /* UReadCCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -735,7 +758,10 @@
 				FB8E9AEB254C17E200C96094 /* UAPI.swift in Sources */,
 				FB88F52C2558EDDE00C2F62F /* UChapterCCell.swift in Sources */,
 				FB8E9ACA254BFEDF00C96094 /* UCollectListViewController.swift in Sources */,
+				FB88F5362559340400C2F62F /* UReadBottomBar.swift in Sources */,
+				FB88F53225592AED00C2F62F /* UReadViewController.swift in Sources */,
 				FBF324402553E48C00D40FF6 /* UComicHead.swift in Sources */,
+				FB88F53425592D5C00C2F62F /* UReadTopBar.swift in Sources */,
 				FB88F52E2559013400C2F62F /* UChapterCHead.swift in Sources */,
 				FB8E9ADA254C0B0500C96094 /* Global.swift in Sources */,
 				FB8524D0254FFE2500648B03 /* UCollectionViewAlignedLayout.swift in Sources */,
@@ -770,6 +796,7 @@
 				FBF3243C2553C3DC00D40FF6 /* UChapterViewController.swift in Sources */,
 				FB85251B2552955700648B03 /* USpecialTCell.swift in Sources */,
 				FB4100A3254ACA0E00C3CCA3 /* TabBarViewController.swift in Sources */,
+				FB88F53B25593E2300C2F62F /* UNoticeBar.swift in Sources */,
 				FB8524EE2550060000648B03 /* UComicCHead.swift in Sources */,
 				FB8524F3255007FB00648B03 /* UComicFoot.swift in Sources */,
 				FB8524AA254FEE9900648B03 /* UCollectionViewSectionBackgroundLayout.swift in Sources */,
@@ -784,6 +811,7 @@
 				FB4100D4254ACF4000C3CCA3 /* HomeViewController.swift in Sources */,
 				FB852519255280B700648B03 /* URankCCell.swift in Sources */,
 				FBF32444255513B500D40FF6 /* UDescriptionTCell.swift in Sources */,
+				FB88F53825593A1700C2F62F /* UReadCCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

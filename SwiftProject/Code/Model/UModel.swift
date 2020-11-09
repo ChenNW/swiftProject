@@ -4,7 +4,6 @@
 //
 //  Created by Cnw on 2020/11/2.
 //
-
 ///首页model
 struct BoutiqueListModel:HandyJSON {
 //    var galleryItems = <#value#>
@@ -306,7 +305,25 @@ struct CommentListModel: HandyJSON {
 }
 
 
+///阅读model
+struct ImageModel: HandyJSON {
+    var location: String?
+    var image_id: Int = 0
+    var width: Int = 0
+    var height: Int = 0
+    var total_tucao: Int = 0
+    var webp: Int = 0
+    var type: Int = 0
+    var img05: String?
+    var img50: String?
+}
 
+struct ChapterModel: HandyJSON {
+    var status: Int = 0
+    var chapter_id: Int = 0
+    var type: Int = 0
+    var image_list: [ImageModel]?
+}
 
 
 

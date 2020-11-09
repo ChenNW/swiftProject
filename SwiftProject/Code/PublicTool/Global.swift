@@ -52,6 +52,12 @@ extension UIImageView {
     
 }
 
+var isIphoneX: Bool {
+    return UI_USER_INTERFACE_IDIOM() == .phone
+        && (max(UIScreen.main.bounds.height, UIScreen.main.bounds.width) == 812
+        || max(UIScreen.main.bounds.height, UIScreen.main.bounds.width) == 896)
+}
+
 //MARK: 打印
 func ULog<T>(_ message: T ,file: String = #file ,function: String = #function ,lineNumber: Int = #line){
     #if DEBUG

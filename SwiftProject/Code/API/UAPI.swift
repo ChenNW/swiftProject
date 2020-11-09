@@ -58,7 +58,7 @@ enum UApi {
     case detailRealtime(comicid: Int)//详情(实时)
     case commentList(object_id: Int, thread_id: Int, page: Int)//评论
     case guessLike//猜你喜欢
-    
+    case chapter(chapter_id: Int)//章节内容
 }
 
 extension UApi: TargetType{//Moya协议
@@ -79,6 +79,7 @@ extension UApi: TargetType{//Moya协议
         case .detailRealtime: return "comic/detail_realtime"//详情(实时)
         case .commentList: return "comment/list"//评论
         case .guessLike: return "comic/guessLike"//猜你喜欢
+        case .chapter: return "comic/chapterNew"//章节内容
         }
     }
     ///请求方式
@@ -106,6 +107,9 @@ extension UApi: TargetType{//Moya协议
             parameters["object_id"] = object_id
             parameters["thread_id"] = thread_id
             parameters["page"] = page
+        case .chapter(let chapter_id):
+            parameters["chapter_id"] = chapter_id
+            
         default: break
         }
         

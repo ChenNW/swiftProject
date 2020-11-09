@@ -21,6 +21,11 @@ extension UIColor {
                         b: arc4random_uniform(256))
         
     }
+    ///主题色
+    class var theme: UIColor {
+        return UIColor(r: 29, g: 221, b: 43)
+    }
+    
     ///十六进制颜色
     class func hex(hexString: String) -> UIColor {
         
