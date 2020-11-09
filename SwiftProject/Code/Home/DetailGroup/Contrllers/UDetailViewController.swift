@@ -12,6 +12,8 @@ class UDetailViewController: UBaseViewController {
     var detailModel:DetailStaticModel?
     var detailRealtime:DetailRealtimeModel?
     var guessLike:GuessYouLikeModel?
+    weak var delegate: UComicViewWillEndDraggingDelegate?
+    
     
     private lazy var tableView: UITableView = {
         let tableV = UITableView(frame: CGRect.zero, style: .plain)
@@ -45,6 +47,12 @@ class UDetailViewController: UBaseViewController {
 }
 
 extension UDetailViewController:UITableViewDelegate,UITableViewDataSource{
+    
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        delegate?.comicWillEndDragging(scrollView)
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return detailModel != nil ? 4: 0
     }
@@ -94,4 +102,5 @@ extension UDetailViewController:UITableViewDelegate,UITableViewDataSource{
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
+
 }

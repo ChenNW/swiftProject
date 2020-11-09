@@ -46,6 +46,9 @@
 		FB8525252552A46500648B03 /* UMineHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8525242552A46500648B03 /* UMineHead.swift */; };
 		FB88F5282558E07200C2F62F /* UOtherWorksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88F5272558E07200C2F62F /* UOtherWorksViewController.swift */; };
 		FB88F52A2558E32400C2F62F /* UOtherWorksCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88F5292558E32400C2F62F /* UOtherWorksCCell.swift */; };
+		FB88F52C2558EDDE00C2F62F /* UChapterCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88F52B2558EDDE00C2F62F /* UChapterCCell.swift */; };
+		FB88F52E2559013400C2F62F /* UChapterCHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88F52D2559013400C2F62F /* UChapterCHead.swift */; };
+		FB88F5302559134300C2F62F /* UCommentTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88F52F2559134300C2F62F /* UCommentTCell.swift */; };
 		FB8E9A59254AD29900C96094 /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A58254AD29900C96094 /* CategoryController.swift */; };
 		FB8E9A63254AD2B500C96094 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A62254AD2B500C96094 /* MineViewController.swift */; };
 		FB8E9A6B254AD2C000C96094 /* BookShelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A6A254AD2C000C96094 /* BookShelfViewController.swift */; };
@@ -138,6 +141,9 @@
 		FB8525242552A46500648B03 /* UMineHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMineHead.swift; sourceTree = "<group>"; };
 		FB88F5272558E07200C2F62F /* UOtherWorksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UOtherWorksViewController.swift; sourceTree = "<group>"; };
 		FB88F5292558E32400C2F62F /* UOtherWorksCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UOtherWorksCCell.swift; sourceTree = "<group>"; };
+		FB88F52B2558EDDE00C2F62F /* UChapterCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UChapterCCell.swift; sourceTree = "<group>"; };
+		FB88F52D2559013400C2F62F /* UChapterCHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UChapterCHead.swift; sourceTree = "<group>"; };
+		FB88F52F2559134300C2F62F /* UCommentTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCommentTCell.swift; sourceTree = "<group>"; };
 		FB8E9A58254AD29900C96094 /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
 		FB8E9A62254AD2B500C96094 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		FB8E9A6A254AD2C000C96094 /* BookShelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookShelfViewController.swift; sourceTree = "<group>"; };
@@ -536,6 +542,9 @@
 				FBF3244725551BF800D40FF6 /* UTicketTCell.swift */,
 				FBF3244925551E9D00D40FF6 /* UGuessLikeTCell.swift */,
 				FB88F5292558E32400C2F62F /* UOtherWorksCCell.swift */,
+				FB88F52B2558EDDE00C2F62F /* UChapterCCell.swift */,
+				FB88F52D2559013400C2F62F /* UChapterCHead.swift */,
+				FB88F52F2559134300C2F62F /* UCommentTCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -724,8 +733,10 @@
 				FB852434254FD09D00648B03 /* UBaseCollectionViewCell.swift in Sources */,
 				FB8E9A6B254AD2C000C96094 /* BookShelfViewController.swift in Sources */,
 				FB8E9AEB254C17E200C96094 /* UAPI.swift in Sources */,
+				FB88F52C2558EDDE00C2F62F /* UChapterCCell.swift in Sources */,
 				FB8E9ACA254BFEDF00C96094 /* UCollectListViewController.swift in Sources */,
 				FBF324402553E48C00D40FF6 /* UComicHead.swift in Sources */,
+				FB88F52E2559013400C2F62F /* UChapterCHead.swift in Sources */,
 				FB8E9ADA254C0B0500C96094 /* Global.swift in Sources */,
 				FB8524D0254FFE2500648B03 /* UCollectionViewAlignedLayout.swift in Sources */,
 				FB4100B2254ACCD900C3CCA3 /* UBaseViewController.swift in Sources */,
@@ -743,6 +754,7 @@
 				FB8E9A63254AD2B500C96094 /* MineViewController.swift in Sources */,
 				FB8E9A96254BA92700C96094 /* UPageViewController.swift in Sources */,
 				FB88F52A2558E32400C2F62F /* UOtherWorksCCell.swift in Sources */,
+				FB88F5302559134300C2F62F /* UCommentTCell.swift in Sources */,
 				FB8524C6254FF9DD00648B03 /* ArrayExtensions.swift in Sources */,
 				FBF3244A25551E9D00D40FF6 /* UGuessLikeTCell.swift in Sources */,
 				FB8524D52550056100648B03 /* UBaseCollectionReusableView.swift in Sources */,

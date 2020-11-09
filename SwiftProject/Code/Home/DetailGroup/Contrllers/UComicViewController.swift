@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol UComicViewWillEndDraggingDelegate: class {
+    func comicWillEndDragging(_ scrollView: UIScrollView)
+}
+
 class UComicViewController: UBaseViewController {
 
     private var detailId:Int = 0
@@ -22,14 +26,17 @@ class UComicViewController: UBaseViewController {
     
     private lazy var detailVC: UDetailViewController = {
         let detailVc = UDetailViewController()
+        detailVc.delegate = self
         return detailVc
     }()
     private lazy var chapterVc: UChapterViewController = {
         let chapterV = UChapterViewController()
+        chapterV.delegate = self
         return chapterV
     }()
     private lazy var commentVc: UCommentViewController = {
         let commentV = UCommentViewController()
+        commentV.delegate = self
         return commentV
     }()
     
@@ -77,11 +84,12 @@ class UComicViewController: UBaseViewController {
         ApiLoadingProvider.request(UApi.detailStatic(comicid: detailId), model: DetailStaticModel.self) {[weak self] (result) in
             
             self?.detailStackModel = result
-            self?.headView.detailModel = self?.detailStackModel?.comic
-            self?.detailVC.detailModel = result
+            self?.headView.detailModel = self?.detailStackModel?.comic///头部赋值
+            self?.detailVC.detailModel = result///详情数据
+            self?.chapterVc.detailStaticModel = result ///目录数据
             ///请求评论
-            ApiProvider.request(UApi.commentList(object_id: result?.comic?.comic_id ?? 0, thread_id: result?.comic?.thread_id ?? 0, page: -1), model: ComicListsModel.self) { [weak self](result) in
-                
+            ApiProvider.request(UApi.commentList(object_id: result?.comic?.comic_id ?? 0, thread_id: result?.comic?.thread_id ?? 0, page: -1), model: CommentListModel.self) { [weak self](result) in
+                self?.commentVc.commentsList = result
                 group.leave()
             }
         }
@@ -89,8 +97,8 @@ class UComicViewController: UBaseViewController {
         group.enter()
         ///实时信息
         ApiProvider.request(UApi.detailRealtime(comicid: detailId), model: DetailRealtimeModel.self) { [weak self](result) in
-            self?.headView.realTimeModel = result?.comic
-            self?.detailVC.detailRealtime = result
+            self?.headView.realTimeModel = result?.comic ///头部实时赋值
+            self?.detailVC.detailRealtime = result/// 详情月票信息
             group.leave()
         }
         
@@ -102,8 +110,9 @@ class UComicViewController: UBaseViewController {
         }
         
         group.notify(queue: DispatchQueue.main) {
-            
             self.detailVC.reloadData()
+            self.chapterVc.reloadData()
+            self.commentVc.reloadData()
         }
         
     }
@@ -113,7 +122,7 @@ class UComicViewController: UBaseViewController {
         view.addSubview(mainScrollView)
         mainScrollView.snp.makeConstraints{
             $0.edges.equalTo(self.view.usnp.edges).priority(.low)
-            $0.top.equalToSuperview()
+            $0.edges.equalToSuperview()
         }
         let contentView = UIView()
         mainScrollView.addSubview(contentView)
@@ -136,15 +145,24 @@ class UComicViewController: UBaseViewController {
  
 }
 
-extension UComicViewController:UIScrollViewDelegate{
+extension UComicViewController:UIScrollViewDelegate,UComicViewWillEndDraggingDelegate{
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y >= -scrollView.parallaxHeader.minimumHeight {
             navigationController?.barStyle(.theme)
-            navigationItem.title = "666"
+            navigationItem.title = detailStackModel?.comic?.name
         }else{
             navigationController?.barStyle(.clear)
             navigationItem.title = ""
         }
+    }
+    
+    func comicWillEndDragging(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y > 0  {
+            mainScrollView.setContentOffset(CGPoint(x: 0, y: -self.mainScrollView.parallaxHeader.minimumHeight), animated: true)
+        }else{
+            mainScrollView.setContentOffset(CGPoint(x: 0, y: -self.mainScrollView.parallaxHeader.height), animated: true)
+        }
+        
     }
     
 }

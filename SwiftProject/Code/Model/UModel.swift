@@ -241,8 +241,68 @@ struct ChapterRealtimeModel: HandyJSON {
 struct DetailRealtimeModel:HandyJSON {
     var comic:ComicRealtimeModel?
     var chapter_list:[ChapterRealtimeModel]?
-    
-    
+}
+///评论model
+struct LevelModel: HandyJSON {
+    var album_size: CGFloat = 0
+    var exp_speed: Float = 0
+    var favorite_num: Int = 0
+    var level: Int = 0
+    var max: Int = 0
+    var min_exp: Int = 0
+    var ticket: Int = 0
+    var wage: Int = 0
+}
+
+struct CommentModel: HandyJSON {
+    var cate: Int = 0
+    var color: String?
+    var comic_author: Int = 0
+    var comment_from: String?
+    var comment_id: Int = 0
+    var content: String?
+    var content_filter: String?
+    var create_time: TimeInterval = 0
+    var create_time_str: String?
+    var exp: Float = 0
+    var face: String?
+    var face_type: Int = 0
+    var floor: Int = 0
+    var gift_img: String?
+    var gift_num: Int = 0
+    var group_admin: Bool = false
+    var group_author: Bool = false
+    var group_custom: Bool = false
+    var group_user: Bool = false
+    var id: Int = 0
+    var imageList: [Any]?
+    var ip: String?
+    var is_choice: Bool = false
+    var is_delete: Bool = false
+    var is_lock: Bool = false
+    var is_up: Bool = false
+    var level: LevelModel?
+    var likeCount: Int = 0
+    var likeState: Int = 0
+    var nickname: String?
+    var online_time: TimeInterval = 0
+    var sex: String?
+    var ticketNum: Int = 0
+    var title: String?
+    var total_reply: Int = 0
+    var user_id: Int = 0
+    var vip_exp: Int = 0
+}
+
+struct CommentListModel: HandyJSON {
+    var commentCount: Int = 0
+    var commentList: [CommentModel]?
+    var hasMore: Bool = false
+    var objectId: Int = 0
+    var objectType: String?
+    var page: Int = 0
+    var pageCount: Int = 0
+    var serverNextPage: Int = 0
 }
 
 

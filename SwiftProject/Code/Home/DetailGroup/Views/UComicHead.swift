@@ -48,6 +48,7 @@ class UComicHead: UIView {
         image.layer.cornerRadius = 3
         image.layer.borderWidth = 1
         image.layer.borderColor = UIColor.white.cgColor
+        image.clipsToBounds = true
         return image
     }()
     
