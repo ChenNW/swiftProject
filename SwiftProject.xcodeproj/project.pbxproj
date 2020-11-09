@@ -44,6 +44,8 @@
 		FB8525212552A3C300648B03 /* UIScrollView+ParallaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB85251E2552A3C300648B03 /* UIScrollView+ParallaxHeader.swift */; };
 		FB8525222552A3C300648B03 /* ParallaxHeaderMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB85251F2552A3C300648B03 /* ParallaxHeaderMode.swift */; };
 		FB8525252552A46500648B03 /* UMineHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8525242552A46500648B03 /* UMineHead.swift */; };
+		FB88F5282558E07200C2F62F /* UOtherWorksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88F5272558E07200C2F62F /* UOtherWorksViewController.swift */; };
+		FB88F52A2558E32400C2F62F /* UOtherWorksCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88F5292558E32400C2F62F /* UOtherWorksCCell.swift */; };
 		FB8E9A59254AD29900C96094 /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A58254AD29900C96094 /* CategoryController.swift */; };
 		FB8E9A63254AD2B500C96094 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A62254AD2B500C96094 /* MineViewController.swift */; };
 		FB8E9A6B254AD2C000C96094 /* BookShelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A6A254AD2C000C96094 /* BookShelfViewController.swift */; };
@@ -134,6 +136,8 @@
 		FB85251E2552A3C300648B03 /* UIScrollView+ParallaxHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ParallaxHeader.swift"; sourceTree = "<group>"; };
 		FB85251F2552A3C300648B03 /* ParallaxHeaderMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxHeaderMode.swift; sourceTree = "<group>"; };
 		FB8525242552A46500648B03 /* UMineHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMineHead.swift; sourceTree = "<group>"; };
+		FB88F5272558E07200C2F62F /* UOtherWorksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UOtherWorksViewController.swift; sourceTree = "<group>"; };
+		FB88F5292558E32400C2F62F /* UOtherWorksCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UOtherWorksCCell.swift; sourceTree = "<group>"; };
 		FB8E9A58254AD29900C96094 /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
 		FB8E9A62254AD2B500C96094 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		FB8E9A6A254AD2C000C96094 /* BookShelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookShelfViewController.swift; sourceTree = "<group>"; };
@@ -518,6 +522,7 @@
 				FBF324392553C3D100D40FF6 /* UDetailViewController.swift */,
 				FBF3243B2553C3DC00D40FF6 /* UChapterViewController.swift */,
 				FBF3243D2553C3E600D40FF6 /* UCommentViewController.swift */,
+				FB88F5272558E07200C2F62F /* UOtherWorksViewController.swift */,
 			);
 			path = Contrllers;
 			sourceTree = "<group>";
@@ -530,6 +535,7 @@
 				FBF3244525551A2600D40FF6 /* UOtherWorksTCell.swift */,
 				FBF3244725551BF800D40FF6 /* UTicketTCell.swift */,
 				FBF3244925551E9D00D40FF6 /* UGuessLikeTCell.swift */,
+				FB88F5292558E32400C2F62F /* UOtherWorksCCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -723,6 +729,7 @@
 				FB8E9ADA254C0B0500C96094 /* Global.swift in Sources */,
 				FB8524D0254FFE2500648B03 /* UCollectionViewAlignedLayout.swift in Sources */,
 				FB4100B2254ACCD900C3CCA3 /* UBaseViewController.swift in Sources */,
+				FB88F5282558E07200C2F62F /* UOtherWorksViewController.swift in Sources */,
 				FB8E9ABB254BFCC100C96094 /* UVIPListViewController.swift in Sources */,
 				FB8E9ACF254BFF0C00C96094 /* UDocumentListViewController.swift in Sources */,
 				FB4100BB254ACD2000C3CCA3 /* UIColorExtension.swift in Sources */,
@@ -735,6 +742,7 @@
 				FB8525222552A3C300648B03 /* ParallaxHeaderMode.swift in Sources */,
 				FB8E9A63254AD2B500C96094 /* MineViewController.swift in Sources */,
 				FB8E9A96254BA92700C96094 /* UPageViewController.swift in Sources */,
+				FB88F52A2558E32400C2F62F /* UOtherWorksCCell.swift in Sources */,
 				FB8524C6254FF9DD00648B03 /* ArrayExtensions.swift in Sources */,
 				FBF3244A25551E9D00D40FF6 /* UGuessLikeTCell.swift in Sources */,
 				FB8524D52550056100648B03 /* UBaseCollectionReusableView.swift in Sources */,

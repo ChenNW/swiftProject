@@ -46,10 +46,10 @@ class UDetailViewController: UBaseViewController {
 
 extension UDetailViewController:UITableViewDelegate,UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
-        4
+        return detailModel != nil ? 4: 0
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        return (section == 1 && detailModel?.otherWorks?.count == 0) ? 0:1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
@@ -80,5 +80,18 @@ extension UDetailViewController:UITableViewDelegate,UITableViewDataSource{
         }
         
         return 44
+    }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return (section == 1 && detailModel?.otherWorks?.count == 0) ? CGFloat.leastNormalMagnitude : 10
+    }
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            let vc = UOtherWorksViewController(otherWorks: detailModel?.otherWorks)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }

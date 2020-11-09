@@ -134,8 +134,8 @@ class UComicHead: UIView {
     var detailModel:ComicStaticModel?{
         didSet{
             guard let model = detailModel else {return}
-            bgImgeView.setImageView(urlString: model.wideCover!, placeHorderImage:  UIImage(named: "normal_placeholder_v"))
-            coverImgeView.setImageView(urlString: model.cover!, placeHorderImage:  UIImage(named: "normal_placeholder_v"))
+            bgImgeView.setImageView(urlString: model.wideCover, placeHorderImage:  UIImage(named: "normal_placeholder_v"))
+            coverImgeView.setImageView(urlString: model.cover , placeHorderImage:  UIImage(named: "normal_placeholder_v"))
             titleLabel.text = model.name
             authorLabel.text = model.author?.name
             themes = model.theme_ids ?? []

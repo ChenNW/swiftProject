@@ -45,9 +45,6 @@ class UGuessLikeTCell: UBaseTableViewCell {
     
     var model:GuessYouLikeModel? {
         didSet{
-            guard let model = model else {
-                return
-            }
             collectionView.reloadData()
         }
     }
@@ -72,6 +69,7 @@ extension UGuessLikeTCell:UICollectionViewDelegateFlowLayout,UICollectionViewDat
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: UComicCCell.self)
+        cell.style = .withTitle
         cell.model = model?.comics?[indexPath.item]
         return cell
     }
@@ -79,5 +77,11 @@ extension UGuessLikeTCell:UICollectionViewDelegateFlowLayout,UICollectionViewDat
         let width = floor((collectionView.frame.width - 50)/4)
         return CGSize(width: width, height: collectionView.frame.height - 10)
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let signalModel = model?.comics?[indexPath.item]
+        let vc = UComicViewController(detailId: signalModel!.comic_id)
+        topVC?.navigationController?.pushViewController(vc, animated: true)
+        
+    }
 }

@@ -38,10 +38,10 @@ private  func _topVC(_ vc: UIViewController?) -> UIViewController? {
 
 extension UIImageView {
     
-    func setImageView(urlString: String,placeHorderImage:Placeholder?) {
+    func setImageView(urlString: String? = "",placeHorderImage:Placeholder?) {
         
-        if urlString.count > 0 {
-            self.kf.setImage(with: URL(string: urlString),
+        if urlString != nil {
+            self.kf.setImage(with: URL(string: urlString!),
                              placeholder: placeHorderImage ?? UIImage(named: "normal_placeholder_h") ,
                              options:[.transition(.fade(0.5))])
         }else{

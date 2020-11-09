@@ -90,13 +90,14 @@ class UComicViewController: UBaseViewController {
         ///实时信息
         ApiProvider.request(UApi.detailRealtime(comicid: detailId), model: DetailRealtimeModel.self) { [weak self](result) in
             self?.headView.realTimeModel = result?.comic
+            self?.detailVC.detailRealtime = result
             group.leave()
         }
         
         ///猜你喜欢
         group.enter()
         ApiProvider.request(UApi.guessLike, model: GuessYouLikeModel.self) { [weak self](result) in
-            
+            self?.detailVC.guessLike = result
             group.leave()
         }
         
