@@ -15,4 +15,7 @@ class HomeViewController: UPageViewController {
         rightButton.setImage(UIImage(named: "nav_search"), for: .normal)
     }
     
+    override func rightButtonClick() {
+        navigationController?.pushViewController(USearchViewController(), animated: true)
+    }
 }

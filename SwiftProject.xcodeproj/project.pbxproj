@@ -54,6 +54,11 @@
 		FB88F5362559340400C2F62F /* UReadBottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88F5352559340400C2F62F /* UReadBottomBar.swift */; };
 		FB88F53825593A1700C2F62F /* UReadCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88F53725593A1700C2F62F /* UReadCCell.swift */; };
 		FB88F53B25593E2300C2F62F /* UNoticeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88F53A25593E2300C2F62F /* UNoticeBar.swift */; };
+		FB88F53D25594F6F00C2F62F /* USearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88F53C25594F6F00C2F62F /* USearchViewController.swift */; };
+		FB88F53F255A2C0200C2F62F /* UIBarButtonItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88F53E255A2C0200C2F62F /* UIBarButtonItemExtension.swift */; };
+		FB88F542255A3C4400C2F62F /* UBaseTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88F541255A3C4400C2F62F /* UBaseTableViewHeaderFooterView.swift */; };
+		FB88F544255A3CCC00C2F62F /* USearchTHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88F543255A3CCC00C2F62F /* USearchTHead.swift */; };
+		FB88F546255A40A300C2F62F /* USearchTFoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88F545255A40A300C2F62F /* USearchTFoot.swift */; };
 		FB8E9A59254AD29900C96094 /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A58254AD29900C96094 /* CategoryController.swift */; };
 		FB8E9A63254AD2B500C96094 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A62254AD2B500C96094 /* MineViewController.swift */; };
 		FB8E9A6B254AD2C000C96094 /* BookShelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E9A6A254AD2C000C96094 /* BookShelfViewController.swift */; };
@@ -154,6 +159,11 @@
 		FB88F5352559340400C2F62F /* UReadBottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UReadBottomBar.swift; sourceTree = "<group>"; };
 		FB88F53725593A1700C2F62F /* UReadCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UReadCCell.swift; sourceTree = "<group>"; };
 		FB88F53A25593E2300C2F62F /* UNoticeBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNoticeBar.swift; sourceTree = "<group>"; };
+		FB88F53C25594F6F00C2F62F /* USearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USearchViewController.swift; sourceTree = "<group>"; };
+		FB88F53E255A2C0200C2F62F /* UIBarButtonItemExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemExtension.swift; sourceTree = "<group>"; };
+		FB88F541255A3C4400C2F62F /* UBaseTableViewHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBaseTableViewHeaderFooterView.swift; sourceTree = "<group>"; };
+		FB88F543255A3CCC00C2F62F /* USearchTHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USearchTHead.swift; sourceTree = "<group>"; };
+		FB88F545255A40A300C2F62F /* USearchTFoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USearchTFoot.swift; sourceTree = "<group>"; };
 		FB8E9A58254AD29900C96094 /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
 		FB8E9A62254AD2B500C96094 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		FB8E9A6A254AD2C000C96094 /* BookShelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookShelfViewController.swift; sourceTree = "<group>"; };
@@ -308,6 +318,7 @@
 				FB85250125500FBD00648B03 /* USpecialViewController.swift */,
 				FB8525052550ECE000648B03 /* UUpdateListViewController.swift */,
 				FB8525072550ECEF00648B03 /* UComicListViewController.swift */,
+				FB88F53C25594F6F00C2F62F /* USearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -329,6 +340,7 @@
 				FB4100BA254ACD2000C3CCA3 /* UIColorExtension.swift */,
 				FB8524C5254FF9DD00648B03 /* ArrayExtensions.swift */,
 				FBF324412553FC9B00D40FF6 /* UIViewExtension.swift */,
+				FB88F53E255A2C0200C2F62F /* UIBarButtonItemExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -394,6 +406,7 @@
 		FB852432254FD02800648B03 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FB88F540255A3C1000C2F62F /* Search */,
 				FB8524D42550056100648B03 /* UBaseCollectionReusableView.swift */,
 				FB852433254FD09D00648B03 /* UBaseCollectionViewCell.swift */,
 				FB85243B254FD19600648B03 /* UComicCCell.swift */,
@@ -465,6 +478,16 @@
 				FB88F53A25593E2300C2F62F /* UNoticeBar.swift */,
 			);
 			path = NoticeBar;
+			sourceTree = "<group>";
+		};
+		FB88F540255A3C1000C2F62F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				FB88F541255A3C4400C2F62F /* UBaseTableViewHeaderFooterView.swift */,
+				FB88F543255A3CCC00C2F62F /* USearchTHead.swift */,
+				FB88F545255A40A300C2F62F /* USearchTFoot.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		FB8E9A57254AD28900C96094 /* Controlles */ = {
@@ -753,8 +776,10 @@
 				FB8525212552A3C300648B03 /* UIScrollView+ParallaxHeader.swift in Sources */,
 				FB41FF1A254AB49D00C3CCA3 /* AppDelegate.swift in Sources */,
 				FB8525252552A46500648B03 /* UMineHead.swift in Sources */,
+				FB88F53D25594F6F00C2F62F /* USearchViewController.swift in Sources */,
 				FB852434254FD09D00648B03 /* UBaseCollectionViewCell.swift in Sources */,
 				FB8E9A6B254AD2C000C96094 /* BookShelfViewController.swift in Sources */,
+				FB88F53F255A2C0200C2F62F /* UIBarButtonItemExtension.swift in Sources */,
 				FB8E9AEB254C17E200C96094 /* UAPI.swift in Sources */,
 				FB88F52C2558EDDE00C2F62F /* UChapterCCell.swift in Sources */,
 				FB8E9ACA254BFEDF00C96094 /* UCollectListViewController.swift in Sources */,
@@ -767,13 +792,16 @@
 				FB8524D0254FFE2500648B03 /* UCollectionViewAlignedLayout.swift in Sources */,
 				FB4100B2254ACCD900C3CCA3 /* UBaseViewController.swift in Sources */,
 				FB88F5282558E07200C2F62F /* UOtherWorksViewController.swift in Sources */,
+				FB88F546255A40A300C2F62F /* USearchTFoot.swift in Sources */,
 				FB8E9ABB254BFCC100C96094 /* UVIPListViewController.swift in Sources */,
 				FB8E9ACF254BFF0C00C96094 /* UDocumentListViewController.swift in Sources */,
 				FB4100BB254ACD2000C3CCA3 /* UIColorExtension.swift in Sources */,
 				FB85250F25510C0400648B03 /* UComicTCell.swift in Sources */,
 				FB85250225500FBD00648B03 /* USpecialViewController.swift in Sources */,
 				FB8525202552A3C300648B03 /* ParallaxHeader.swift in Sources */,
+				FB88F544255A3CCC00C2F62F /* USearchTHead.swift in Sources */,
 				FBF324382553C3BF00D40FF6 /* UComicViewController.swift in Sources */,
+				FB88F542255A3C4400C2F62F /* UBaseTableViewHeaderFooterView.swift in Sources */,
 				FB8525082550ECEF00648B03 /* UComicListViewController.swift in Sources */,
 				FBF3243A2553C3D100D40FF6 /* UDetailViewController.swift in Sources */,
 				FB8525222552A3C300648B03 /* ParallaxHeaderMode.swift in Sources */,

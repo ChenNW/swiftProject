@@ -27,7 +27,7 @@ class CategoryController: UBaseViewController {
     }()
     
     @objc private func searchButtonClick() -> Void {
-        
+        navigationController?.pushViewController(USearchViewController(), animated: true)
     }
     
     private lazy var collectionView: UICollectionView = {

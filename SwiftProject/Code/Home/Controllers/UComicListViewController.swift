@@ -111,4 +111,10 @@ extension UComicListViewController: UITableViewDataSource
             return cell
         }
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let model = self.dataArray[indexPath.row]
+        let vc = UComicViewController(detailId: model.comicId)
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

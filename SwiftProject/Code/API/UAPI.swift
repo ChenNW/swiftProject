@@ -8,16 +8,14 @@
 import Result
 
 ///自定义超时时间
-let timeOutClosure = {(endPoint:Endpoint,closure:MoyaProvider<UApi>.RequestResultClosure) -> Void in
+let timeOutClosure = {(endpoint: Endpoint, closure: MoyaProvider<UApi>.RequestResultClosure) -> Void in
     
-    if var urlRequest = try? endPoint.urlRequest() {
+    if var urlRequest = try? endpoint.urlRequest() {
         urlRequest.timeoutInterval = 20
         closure(.success(urlRequest))
-        
-    }else{
-        closure(.failure(MoyaError.requestMapping(endPoint.url)))
+    } else {
+        closure(.failure(MoyaError.requestMapping(endpoint.url)))
     }
-    
 }
 
 let LoadingPlugin = NetworkActivityPlugin{ (type ,target) in
@@ -47,6 +45,9 @@ let ApiLoadingProvider = MoyaProvider<UApi>(requestClosure: timeOutClosure,  plu
 
 
 enum UApi {
+    case searchHot//搜索热门
+    case searchRelative(inputText: String)//相关搜索
+    case searchResult(argCon: Int, q: String)//搜索结果
     case boutiqueList(sexType:Int) //推荐列表
     case comicList(argCon: Int, argName:String ,argValue:Int ,page: Int) //漫画列表
     case vipList//VIP列表
@@ -68,6 +69,9 @@ extension UApi: TargetType{//Moya协议
     ///路径
     var path: String {
         switch self {
+        case .searchHot: return "search/hotkeywordsnew"//搜索热门
+        case .searchRelative: return "search/relative"//相关搜索
+        case .searchResult: return "search/searchResult"//搜索结果
         case .boutiqueList: return "comic/boutiqueListNew"//首页数据
         case .comicList: return "list/commonComicList"//漫画列表
         case .vipList: return "list/vipList"//VIP列表
@@ -88,9 +92,15 @@ extension UApi: TargetType{//Moya协议
     var task: Task {
         var parameters:[String:Any] = [:]
         switch self {
+        case .searchRelative(let inputText):
+            parameters["inputText"] = inputText
+            
+        case .searchResult(let argCon, let q):
+            parameters["argCon"] = argCon
+            parameters["q"] = q
+            
         case .boutiqueList(let sexType):
             parameters["sexType"] = sexType
-            
         case .comicList(let argCon ,let argName,let argValue,let page):
             parameters["argCon"] = argCon
             if argName.count > 0 {parameters["argName"] = argName}
@@ -128,13 +138,11 @@ extension UApi: TargetType{//Moya协议
 ///结果回调
 extension Response {
     func mapModel<T: HandyJSON>(_ type: T.Type) throws -> T {
-        
         let jsonString = String(data: data, encoding: .utf8)
         guard let model = JSONDeserializer<T>.deserializeFrom(json: jsonString) else {
             throw MoyaError.jsonMapping(self)
         }
         return model
-        
     }
 }
 

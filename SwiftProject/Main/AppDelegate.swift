@@ -29,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func configBase(){
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        IQKeyboardManager.shared.toolbarManageBehaviour = .bySubviews
+        IQKeyboardManager.shared.enableAutoToolbar = false
         //MARK: 性别缓存
         let defaults = UserDefaults.standard
         if defaults.value(forKey: String.sexTypeKey) == nil {

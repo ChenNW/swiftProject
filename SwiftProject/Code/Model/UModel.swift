@@ -4,6 +4,7 @@
 //
 //  Created by Cnw on 2020/11/2.
 //
+import KakaJSON
 ///首页model
 struct BoutiqueListModel:HandyJSON {
 //    var galleryItems = <#value#>
@@ -325,6 +326,25 @@ struct ChapterModel: HandyJSON {
     var image_list: [ImageModel]?
 }
 
+///搜索model
+struct SearchItemModel: HandyJSON {
+    var comic_id: Int = 0
+    var name: String?
+    var bgColor: String?
+}
+
+
+struct SearchResultModel: HandyJSON {
+    var comicNum: Int = 0
+    var hasMore: Bool = false
+    var page: Int = 0
+    var comics: [ComicModel]?
+}
+
+struct HotItemsModel: HandyJSON {
+    var hotItems: [SearchItemModel]?
+    var defaultSearch: String?
+}
 
 
 
@@ -338,4 +358,20 @@ struct ReturnData<T: HandyJSON> :HandyJSON {
 struct ResponseData<T: HandyJSON> : HandyJSON{
     var code: Int = 0
     var data: ReturnData<T>?
+}
+
+struct ReturnData1 :Convertible {
+    var message: String?
+    var returnData: [SearchItemModel1]?
+    var stateCode: Int = 0
+}
+
+struct ResponseData1: Convertible{
+    var code: Int = 0
+    var data: ReturnData1?
+}
+struct SearchItemModel1: Convertible {
+    var comic_id: Int = 0
+    var name: String?
+    var bgColor: String?
 }

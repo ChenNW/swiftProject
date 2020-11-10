@@ -12,7 +12,7 @@ let screenHeight = UIScreen.main.bounds.size.height
 
 extension String {
     static let sexTypeKey = "sexTypeKey"
-    
+    static let searchHistoryKey = "searchHistoryKey"
 }
 
 ///顶层控制器

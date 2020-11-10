@@ -15,10 +15,9 @@ class UReadCCell: UBaseCollectionViewCell {
         return img
     }()
     
-    lazy var placeHolder: UIImageView = {
-        let pr = UIImageView(image: UIImage(named: "yaofan"))
-        pr.contentMode = .center
-        return pr
+    lazy var placeHolder: UIImage = {
+        let pr = UIImage(named: "yaofan")
+        return pr!
     }()
     
     override func configUI() {
@@ -34,10 +33,7 @@ class UReadCCell: UBaseCollectionViewCell {
                 return
             }
             imageView.image = nil
-//            imageView.setImageView(urlString: model.location!, placeHorderImage: placeHolder)
-//            imageView.setImageView(urlString: model.location, placeHorderImage: placeHolder)
-//            imageView.kf.setImage(with: URL(string: model.location!))
-            imageView.setImageView(urlString: model.location, placeHorderImage: nil)
+            imageView.setImageView(urlString: model.location, placeHorderImage: placeHolder)
         }
     }
     
